@@ -1,0 +1,1292 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(25, 14, 8, 0.38),
+      rgba(25, 14, 8, 0.52)
+    ),
+    url("../assets/images/hero-madera.png")
+    center / cover
+    no-repeat;
+
+  color: var(--color-cream);
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   LUZ CENTRAL
+========================================================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 50% 48%,
+      rgba(151, 168, 91, 0.13),
+      transparent 48%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.hero__container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1500px;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  margin: 0 auto;
+
+  padding:
+    145px 40px 80px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   CONTENIDO CENTRAL
+========================================================= */
+
+.hero__content {
+  position: relative;
+
+  z-index: 20;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  animation:
+    hero-in
+    1s
+    ease
+    both;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero__eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 22px;
+
+  color:
+    var(--color-green-light);
+
+  font-size:
+    0.72rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.32em;
+}
+
+
+.hero__eyebrow-line {
+  width: 65px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background:
+    var(--color-green-light);
+
+  border-radius:
+    10px;
+}
+
+
+/* =========================================================
+   VIVANCOFFEE
+========================================================= */
+
+.hero__title {
+  margin: 0;
+
+  font-family:
+    "Pally",
+    var(--font-brand),
+    sans-serif;
+
+  font-size:
+    clamp(
+      5rem,
+      9vw,
+      10rem
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    0.85;
+
+  letter-spacing:
+    -0.035em;
+
+  color:
+    var(--color-cream);
+
+  text-shadow:
+    5px 6px 0
+    rgba(
+      0,
+      0,
+      0,
+      0.35
+    ),
+
+    0 12px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.35
+    );
+
+  animation:
+    title-pop
+    1s
+    ease
+    0.15s
+    both;
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+========================================================= */
+
+.hero__subtitle {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-top: 35px;
+}
+
+
+.hero__subtitle h2 {
+  margin: 0;
+
+  font-family:
+    "Pally",
+    var(--font-brand),
+    sans-serif;
+
+  font-size:
+    clamp(
+      1.6rem,
+      3vw,
+      3rem
+    );
+
+  font-weight:
+    600;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    0.04em;
+
+  color:
+    var(--color-cream);
+
+  text-shadow:
+    3px 3px 0
+    rgba(
+      0,
+      0,
+      0,
+      0.3
+    );
+}
+
+
+.hero__subtitle-line {
+  width: 70px;
+  height: 3px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background:
+    var(--color-green-light);
+
+  opacity:
+    0.8;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.hero__description {
+  max-width:
+    650px;
+
+  margin:
+    25px auto 0;
+
+  font-family:
+    var(--font-main);
+
+  font-size:
+    1.05rem;
+
+  line-height:
+    1.75;
+
+  color:
+    rgba(
+      244,
+      234,
+      219,
+      0.9
+    );
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.hero__actions {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  margin-top:
+    32px;
+
+  flex-wrap:
+    wrap;
+}
+
+
+.hero__button {
+  min-height:
+    58px;
+
+  padding:
+    0 32px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  border-radius:
+    14px;
+
+  border:
+    2px solid
+    rgba(
+      244,
+      234,
+      219,
+      0.3
+    );
+
+  font-family:
+    var(--font-main);
+
+  font-size:
+    0.72rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.15em;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.hero__button:hover {
+  transform:
+    translateY(-5px)
+    rotate(-1deg);
+
+  box-shadow:
+    0 12px 25px
+    rgba(
+      0,
+      0,
+      0,
+      0.35
+    );
+}
+
+
+.hero__button-icon {
+  font-size:
+    1.2rem;
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+========================================================= */
+
+.hero__button--primary {
+  background:
+    #d87968;
+
+  border-color:
+    #f0a091;
+
+  color:
+    #fff8ed;
+}
+
+
+/* =========================================================
+   BOTÓN SECUNDARIO
+========================================================= */
+
+.hero__button--secondary {
+  background:
+    #f4dfb4;
+
+  border-color:
+    #fff1d0;
+
+  color:
+    #302016;
+}
+
+
+/* =========================================================
+   ILUSTRACIONES
+   IMPORTANTE:
+   ESTÁN FUERA DEL CONTENIDO CENTRAL
+   PARA NO MOVER EL CENTRO DEL HERO
+========================================================= */
+
+.hero__illustration {
+  position: absolute;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  line-height: 0;
+
+  animation:
+    illustration-float
+    5s
+    ease-in-out
+    infinite;
+}
+
+
+.hero__illustration img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  background: transparent;
+
+  border: 0;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   PIZARRÓN
+========================================================= */
+
+.hero__illustration--board {
+  left:
+    4%;
+
+  bottom:
+    110px;
+
+  width:
+    clamp(
+      170px,
+      15vw,
+      245px
+    );
+
+  transform:
+    rotate(-3deg);
+
+  animation-delay:
+    -1.5s;
+}
+
+
+/* =========================================================
+   TAZA
+========================================================= */
+
+.hero__illustration--coffee {
+  right:
+    5%;
+
+  bottom:
+    105px;
+
+  width:
+    clamp(
+      170px,
+      15vw,
+      245px
+    );
+
+  transform:
+    rotate(3deg);
+
+  animation-delay:
+    -3s;
+}
+
+
+/* =========================================================
+   CORAZONES DECORATIVOS
+========================================================= */
+
+.hero__heart {
+  position:
+    absolute;
+
+  z-index:
+    5;
+
+  font-family:
+    sans-serif;
+
+  font-size:
+    2.2rem;
+
+  color:
+    #e78378;
+
+  text-shadow:
+    2px 2px 0
+    rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
+
+  animation:
+    doodle-float
+    4s
+    ease-in-out
+    infinite;
+
+  pointer-events:
+    none;
+}
+
+
+.hero__heart--one {
+  top:
+    24%;
+
+  left:
+    23%;
+}
+
+
+.hero__heart--two {
+  top:
+    50%;
+
+  right:
+    15%;
+
+  color:
+    var(--color-green-light);
+
+  animation-delay:
+    -1s;
+}
+
+
+.hero__heart--three {
+  bottom:
+    27%;
+
+  left:
+    33%;
+
+  color:
+    #e78378;
+
+  animation-delay:
+    -2s;
+}
+
+
+/* =========================================================
+   DESTELLOS
+========================================================= */
+
+.hero__spark {
+  position:
+    absolute;
+
+  z-index:
+    5;
+
+  color:
+    var(--color-green-light);
+
+  font-size:
+    2rem;
+
+  pointer-events:
+    none;
+
+  animation:
+    sparkle
+    3s
+    ease-in-out
+    infinite;
+}
+
+
+.hero__spark--one {
+  top:
+    38%;
+
+  right:
+    20%;
+}
+
+
+.hero__spark--two {
+  bottom:
+    35%;
+
+  right:
+    28%;
+
+  animation-delay:
+    -1s;
+}
+
+
+.hero__spark--three {
+  top:
+    52%;
+
+  left:
+    27%;
+
+  animation-delay:
+    -2s;
+}
+
+
+/* =========================================================
+   HOJAS DECORATIVAS
+========================================================= */
+
+.hero__leaf {
+  position:
+    absolute;
+
+  z-index:
+    4;
+
+  width:
+    95px;
+
+  height:
+    42px;
+
+  border-radius:
+    100% 0 100% 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #87985b,
+      #40552f
+    );
+
+  border:
+    2px solid
+    rgba(
+      207,
+      220,
+      135,
+      0.55
+    );
+
+  transform-origin:
+    0 50%;
+
+  box-shadow:
+    3px 4px 0
+    rgba(
+      0,
+      0,
+      0,
+      0.18
+    );
+
+  pointer-events:
+    none;
+}
+
+
+.hero__leaf::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    8px;
+
+  top:
+    50%;
+
+  width:
+    75px;
+
+  height:
+    2px;
+
+  background:
+    rgba(
+      232,
+      237,
+      179,
+      0.55
+    );
+
+  transform:
+    rotate(-8deg);
+}
+
+
+.hero__leaf--1 {
+  left:
+    4%;
+
+  bottom:
+    250px;
+
+  transform:
+    rotate(-25deg)
+    scale(0.7);
+}
+
+
+.hero__leaf--2 {
+  left:
+    1%;
+
+  bottom:
+    380px;
+
+  transform:
+    rotate(-10deg)
+    scale(0.6);
+}
+
+
+.hero__leaf--3 {
+  right:
+    5%;
+
+  bottom:
+    280px;
+
+  transform:
+    rotate(20deg)
+    scale(0.7);
+}
+
+
+.hero__leaf--4 {
+  right:
+    1%;
+
+  bottom:
+    400px;
+
+  transform:
+    rotate(-35deg)
+    scale(0.6);
+}
+
+
+/* =========================================================
+   MESA
+========================================================= */
+
+.hero__table {
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  bottom:
+    0;
+
+  height:
+    55px;
+
+  background:
+    #4a2d1c;
+
+  border-top:
+    5px solid
+    #74462a;
+
+  box-shadow:
+    0 -8px 25px
+    rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
+
+  z-index:
+    7;
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.hero__scroll {
+  position:
+    absolute;
+
+  bottom:
+    18px;
+
+  left:
+    50%;
+
+  z-index:
+    20;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    #f4dfb4;
+
+  font-size:
+    0.7rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.25em;
+}
+
+
+.hero__scroll-arrow {
+  font-size:
+    1.5rem;
+
+  color:
+    var(--color-green-light);
+
+  animation:
+    scroll-bounce
+    1.8s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes hero-in {
+
+  from {
+    opacity:
+      0;
+
+    transform:
+      translateY(35px);
+  }
+
+  to {
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes title-pop {
+
+  from {
+    opacity:
+      0;
+
+    transform:
+      scale(0.9);
+  }
+
+  to {
+    opacity:
+      1;
+
+    transform:
+      scale(1);
+  }
+}
+
+
+@keyframes illustration-float {
+
+  0%,
+  100% {
+    translate:
+      0 0;
+  }
+
+  50% {
+    translate:
+      0 -10px;
+  }
+}
+
+
+@keyframes doodle-float {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-5deg);
+  }
+
+  50% {
+    transform:
+      translateY(-12px)
+      rotate(5deg);
+  }
+}
+
+
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity:
+      0.45;
+
+    transform:
+      scale(0.8)
+      rotate(0);
+  }
+
+  50% {
+    opacity:
+      1;
+
+    transform:
+      scale(1.2)
+      rotate(15deg);
+  }
+}
+
+
+@keyframes scroll-bounce {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(7px);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+  .hero__container {
+    padding:
+      130px 30px 75px;
+  }
+
+
+  .hero__content {
+    max-width:
+      820px;
+  }
+
+
+  .hero__title {
+    font-size:
+      clamp(
+        4.5rem,
+        9vw,
+        8rem
+      );
+  }
+
+
+  .hero__illustration--board {
+    left:
+      1%;
+
+    width:
+      180px;
+  }
+
+
+  .hero__illustration--coffee {
+    right:
+      1%;
+
+    width:
+      180px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑA
+========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  .hero__illustration--board {
+    left:
+      -10px;
+
+    bottom:
+      85px;
+
+    width:
+      155px;
+  }
+
+
+  .hero__illustration--coffee {
+    right:
+      -10px;
+
+    bottom:
+      80px;
+
+    width:
+      155px;
+  }
+
+
+  .hero__heart--one {
+    left:
+      15%;
+  }
+
+
+  .hero__heart--two {
+    right:
+      10%;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media screen and (max-width: 700px) {
+
+  .hero__container {
+    width:
+      100%;
+
+    padding:
+      110px 22px 80px;
+  }
+
+
+  .hero__content {
+    width:
+      100%;
+
+    max-width:
+      100%;
+  }
+
+
+  .hero__eyebrow {
+    gap:
+      8px;
+
+    font-size:
+      0.55rem;
+
+    letter-spacing:
+      0.2em;
+  }
+
+
+  .hero__eyebrow-line {
+    width:
+      30px;
+  }
+
+
+  .hero__title {
+    font-size:
+      clamp(
+        3.5rem,
+        17vw,
+        6rem
+      );
+  }
+
+
+  .hero__subtitle {
+    gap:
+      8px;
+
+    margin-top:
+      25px;
+  }
+
+
+  .hero__subtitle h2 {
+    font-size:
+      clamp(
+        1.2rem,
+        6vw,
+        2rem
+      );
+
+    letter-spacing:
+      0.02em;
+  }
+
+
+  .hero__subtitle-line {
+    width:
+      25px;
+  }
+
+
+  .hero__description {
+    max-width:
+      500px;
+
+    font-size:
+      0.85rem;
+  }
+
+
+  .hero__actions {
+    flex-direction:
+      column;
+
+    align-items:
+      center;
+  }
+
+
+  .hero__button {
+    width:
+      min(
+        100%,
+        330px
+      );
+  }
+
+
+  /*
+     En móvil quitamos las ilustraciones
+     para mantener el contenido limpio.
+  */
+
+  .hero__illustration {
+    display:
+      none;
+  }
+
+
+  .hero__leaf {
+    opacity:
+      0.45;
+  }
+
+
+  .hero__leaf--1 {
+    left:
+      -35px;
+  }
+
+
+  .hero__leaf--2 {
+    left:
+      -55px;
+  }
+
+
+  .hero__leaf--3 {
+    right:
+      -35px;
+  }
+
+
+  .hero__leaf--4 {
+    right:
+      -55px;
+  }
+
+
+  .hero__heart--one {
+    left:
+      5%;
+  }
+
+
+  .hero__heart--two {
+    right:
+      5%;
+  }
+
+
+  .hero__heart--three {
+    left:
+      10%;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCIR MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero__content,
+  .hero__title,
+  .hero__illustration,
+  .hero__heart,
+  .hero__spark,
+  .hero__scroll-arrow {
+    animation:
+      none;
+  }
+
+}

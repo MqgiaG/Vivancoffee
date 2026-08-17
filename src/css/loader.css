@@ -1,0 +1,768 @@
+/* =========================
+   LOADER
+========================= */
+
+.loader {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #120b08;
+
+  color: var(--color-white);
+
+  isolation: isolate;
+}
+
+
+/* =========================
+   LUZ CENTRAL
+========================= */
+
+.loader::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(91, 52, 31, 0.5) 0%,
+      rgba(48, 25, 16, 0.28) 32%,
+      transparent 68%
+    );
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.loader__content {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+  max-width: 700px;
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  animation:
+    loader-content-in 1s ease both;
+}
+
+
+/* =========================
+   IMAGEN DEL CAFÉ
+========================= */
+
+.loader__coffee {
+  width: clamp(220px, 30vw, 360px);
+
+  height: auto;
+
+  margin-bottom: 10px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 25px 35px rgba(0, 0, 0, 0.65)
+    )
+    drop-shadow(
+      0 0 35px rgba(198, 155, 115, 0.16)
+    );
+
+  animation:
+    coffee-float 4s ease-in-out infinite;
+}
+
+
+/* =========================
+   MARCA
+========================= */
+
+.loader__title {
+  margin: 0;
+
+  font-family: var(--font-brand);
+
+  font-size: clamp(
+    2.5rem,
+    5vw,
+    5rem
+  );
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  color: var(--color-white);
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.55);
+
+  animation:
+    title-reveal 1.2s ease 0.2s both;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.loader__text {
+  margin-top: 22px;
+
+  font-family: var(--font-main);
+
+  font-size: 0.8rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.45em;
+
+  color: var(--color-beige);
+
+  text-transform: uppercase;
+
+  animation:
+    subtitle-reveal 1.2s ease 0.4s both;
+}
+
+
+/* =========================
+   BARRA
+========================= */
+
+.loader__line {
+  position: relative;
+
+  width: 220px;
+  height: 2px;
+
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  background:
+    rgba(215, 184, 154, 0.18);
+}
+
+
+.loader__progress {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  height: 100%;
+
+  background:
+    var(--color-beige);
+
+  box-shadow:
+    0 0 14px rgba(
+      215,
+      184,
+      154,
+      0.55
+    );
+
+  transition:
+    width 0.12s linear;
+}
+
+
+/* =========================
+   CONTENEDOR DE GRANOS
+========================= */
+
+.loader__beans {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   GRANO
+========================= */
+
+.coffee-bean {
+  position: absolute;
+
+  top: -60px;
+
+  width: 18px;
+  height: 11px;
+
+  border-radius:
+    55% 45% 50% 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b96b34 0%,
+      #7b3b1b 42%,
+      #35170b 100%
+    );
+
+  box-shadow:
+    inset -2px -2px 3px
+      rgba(0, 0, 0, 0.55),
+
+    inset 2px 2px 3px
+      rgba(255, 190, 110, 0.22),
+
+    0 5px 12px
+      rgba(0, 0, 0, 0.45);
+
+  opacity: 0;
+
+  animation:
+    bean-fall 6s linear infinite;
+}
+
+
+/* =========================
+   LÍNEA DEL GRANO
+========================= */
+
+.coffee-bean::after {
+  content: "";
+
+  position: absolute;
+
+  top: 2px;
+  left: 50%;
+
+  width: 2px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(20, 8, 3, 0.85);
+
+  transform:
+    translateX(-50%)
+    rotate(12deg);
+}
+
+
+/* =========================
+   GRANOS 1 - 13
+========================= */
+
+.coffee-bean--1 {
+  left: 4%;
+  animation-delay: -1s;
+}
+
+.coffee-bean--2 {
+  left: 11%;
+  width: 22px;
+  height: 13px;
+  animation-delay: -4s;
+}
+
+.coffee-bean--3 {
+  left: 18%;
+  animation-delay: -2s;
+}
+
+.coffee-bean--4 {
+  left: 26%;
+  width: 20px;
+  height: 12px;
+  animation-delay: -5s;
+}
+
+.coffee-bean--5 {
+  left: 34%;
+  width: 14px;
+  height: 9px;
+  animation-delay: -3s;
+}
+
+.coffee-bean--6 {
+  left: 43%;
+  width: 20px;
+  height: 12px;
+  animation-delay: -6s;
+}
+
+.coffee-bean--7 {
+  left: 51%;
+  animation-delay: -2.5s;
+}
+
+.coffee-bean--8 {
+  left: 59%;
+  width: 21px;
+  height: 13px;
+  animation-delay: -4.5s;
+}
+
+.coffee-bean--9 {
+  left: 67%;
+  animation-delay: -1.5s;
+}
+
+.coffee-bean--10 {
+  left: 74%;
+  width: 20px;
+  height: 12px;
+  animation-delay: -5.5s;
+}
+
+.coffee-bean--11 {
+  left: 81%;
+  animation-delay: -3.5s;
+}
+
+.coffee-bean--12 {
+  left: 88%;
+  width: 21px;
+  height: 12px;
+  animation-delay: -6.5s;
+}
+
+.coffee-bean--13 {
+  left: 95%;
+  animation-delay: -2s;
+}
+
+
+/* =========================
+   GRANOS 14 - 25
+========================= */
+
+.coffee-bean--14 {
+  left: 7%;
+  width: 24px;
+  height: 14px;
+  animation-delay: -2.8s;
+}
+
+.coffee-bean--15 {
+  left: 14%;
+  width: 13px;
+  height: 8px;
+  animation-delay: -5.2s;
+}
+
+.coffee-bean--16 {
+  left: 21%;
+  width: 21px;
+  height: 12px;
+  animation-delay: -1.7s;
+}
+
+.coffee-bean--17 {
+  left: 29%;
+  width: 16px;
+  height: 10px;
+  animation-delay: -6.8s;
+}
+
+.coffee-bean--18 {
+  left: 37%;
+  width: 23px;
+  height: 14px;
+  animation-delay: -3.7s;
+}
+
+.coffee-bean--19 {
+  left: 46%;
+  width: 14px;
+  height: 9px;
+  animation-delay: -7.2s;
+}
+
+.coffee-bean--20 {
+  left: 54%;
+  width: 24px;
+  height: 14px;
+  animation-delay: -4.2s;
+}
+
+.coffee-bean--21 {
+  left: 63%;
+  width: 16px;
+  height: 10px;
+  animation-delay: -2.2s;
+}
+
+.coffee-bean--22 {
+  left: 71%;
+  width: 22px;
+  height: 13px;
+  animation-delay: -6.1s;
+}
+
+.coffee-bean--23 {
+  left: 78%;
+  width: 14px;
+  height: 9px;
+  animation-delay: -3.1s;
+}
+
+.coffee-bean--24 {
+  left: 85%;
+  width: 24px;
+  height: 14px;
+  animation-delay: -5.8s;
+}
+
+.coffee-bean--25 {
+  left: 92%;
+  width: 17px;
+  height: 10px;
+  animation-delay: -1.3s;
+}
+
+
+/* =========================
+   GRANOS 26 - 35
+========================= */
+
+.coffee-bean--26 {
+  left: 3%;
+  width: 12px;
+  height: 8px;
+  animation-delay: -8s;
+}
+
+.coffee-bean--27 {
+  left: 16%;
+  width: 19px;
+  height: 12px;
+  animation-delay: -7s;
+}
+
+.coffee-bean--28 {
+  left: 32%;
+  width: 25px;
+  height: 15px;
+  animation-delay: -4.8s;
+}
+
+.coffee-bean--29 {
+  left: 41%;
+  width: 15px;
+  height: 9px;
+  animation-delay: -8.5s;
+}
+
+.coffee-bean--30 {
+  left: 57%;
+  width: 19px;
+  height: 12px;
+  animation-delay: -6.4s;
+}
+
+.coffee-bean--31 {
+  left: 68%;
+  width: 25px;
+  height: 15px;
+  animation-delay: -2.9s;
+}
+
+.coffee-bean--32 {
+  left: 76%;
+  width: 13px;
+  height: 8px;
+  animation-delay: -7.6s;
+}
+
+.coffee-bean--33 {
+  left: 83%;
+  width: 20px;
+  height: 12px;
+  animation-delay: -4.4s;
+}
+
+.coffee-bean--34 {
+  left: 90%;
+  width: 15px;
+  height: 9px;
+  animation-delay: -6.9s;
+}
+
+.coffee-bean--35 {
+  left: 97%;
+  width: 23px;
+  height: 14px;
+  animation-delay: -3.6s;
+}
+
+
+/* =========================
+   ANIMACIÓN DE GRANOS
+========================= */
+
+@keyframes bean-fall {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate3d(
+        0,
+        -80px,
+        0
+      )
+      rotate(0deg)
+      scale(0.8);
+  }
+
+
+  10% {
+    opacity: 1;
+  }
+
+
+  50% {
+    opacity: 0.95;
+
+    transform:
+      translate3d(
+        35px,
+        50vh,
+        0
+      )
+      rotate(220deg)
+      scale(1);
+  }
+
+
+  85% {
+    opacity: 0.85;
+  }
+
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate3d(
+        -25px,
+        115vh,
+        0
+      )
+      rotate(500deg)
+      scale(0.9);
+  }
+
+}
+
+
+/* =========================
+   ANIMACIÓN CAFÉ
+========================= */
+
+@keyframes coffee-float {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
+
+}
+
+
+/* =========================
+   ENTRADA DEL CONTENIDO
+========================= */
+
+@keyframes loader-content-in {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================
+   ENTRADA DEL TÍTULO
+========================= */
+
+@keyframes title-reveal {
+
+  from {
+    opacity: 0;
+
+    letter-spacing: 0.5em;
+
+    transform:
+      translateY(15px);
+  }
+
+
+  to {
+    opacity: 1;
+
+    letter-spacing: 0.16em;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================
+   ENTRADA DEL TEXTO
+========================= */
+
+@keyframes subtitle-reveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+  }
+
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================
+   OCULTAR LOADER
+========================= */
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  .loader__content {
+    padding: 25px;
+  }
+
+
+  .loader__coffee {
+    width: 230px;
+  }
+
+
+  .loader__title {
+    font-size:
+      clamp(
+        2rem,
+        10vw,
+        3.5rem
+      );
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .loader__text {
+    font-size: 0.65rem;
+
+    letter-spacing: 0.3em;
+  }
+
+
+  .loader__line {
+    width: 160px;
+  }
+
+
+  .coffee-bean {
+    transform: scale(0.8);
+  }
+
+}
+
+
+/* =========================
+   ACCESIBILIDAD
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .loader__coffee,
+  .loader__title,
+  .loader__text,
+  .loader__progress,
+  .coffee-bean {
+    animation: none;
+  }
+
+}

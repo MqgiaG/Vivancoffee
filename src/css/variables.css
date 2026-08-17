@@ -1,0 +1,34 @@
+:root {
+  /* Colores principales */
+  --color-coffee-dark: #120b08;
+  --color-coffee: #3a2115;
+  --color-coffee-light: #8b5e3c;
+
+  /* Verde de VIVANCOFFEE */
+  --color-green: #65754a;
+  --color-green-dark: #3f4d2f;
+  --color-green-light: #87966a;
+
+  /* Tonos cálidos */
+  --color-cream: #f2e8dc;
+  --color-white: #fffaf4;
+  --color-beige: #d7b89a;
+  --color-gold: #c69b73;
+
+  /* Texto */
+  --color-text-dark: #21130c;
+  --color-text-light: #cbb9ac;
+
+  /* Tipografías */
+  --font-main: Arial, sans-serif;
+  --font-brand: "Chillax", sans-serif;
+
+  /* Espaciado */
+  --section-padding: 120px;
+  --container-width: 1400px;
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
