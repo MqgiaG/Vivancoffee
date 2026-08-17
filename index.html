@@ -2355,54 +2355,62 @@
 
         <div class="experience__container">
 
+          <div class="experience__intro">
 
-          <div class="experience__visual">
-
-            <div class="experience__image">
+            <figure class="experience__image-wrapper">
 
               <img
-                src="./src/assets/images/cafeteria.jpg"
+                class="experience__image"
+                src="./src/assets/images/interior-vivancoffee.jpg"
                 alt="Interior de VIVANCOFFEE"
               />
+
+              <figcaption class="experience__image-caption">
+                VIVANCOFFEE · SAN FELIPE, GTO.
+              </figcaption>
+
+            </figure>
+
+
+            <div class="experience__story">
+
+              <p class="experience__label">
+                NUESTRA ESENCIA
+              </p>
+
+              <h2 class="experience__story-title">
+                Un café para disfrutar sin prisa.
+              </h2>
+
+              <p class="experience__story-text">
+                VIVANCOFFEE nació como un espacio para disfrutar
+                algo más que una buena taza de café.
+              </p>
+
+              <p class="experience__story-text">
+                Aquí cada visita puede convertirse en una conversación,
+                una cita, una reunión, una foto o simplemente en un
+                momento para desconectarte y disfrutar.
+              </p>
+
+              <p class="experience__story-signature">
+                Hecho para quedarse un rato más.
+              </p>
 
             </div>
 
           </div>
 
 
-          <div class="experience__content">
+          <div class="experience__quote">
 
-            <p class="experience__eyebrow">
-              MÁS QUE CAFÉ
+            <p class="experience__quote-text">
+              “Un buen café siempre es una buena idea.”
             </p>
 
-
-            <h2 class="experience__title">
-              UN LUGAR PARA
-              <span>QUEDARTE</span>
-            </h2>
-
-
-            <p class="experience__text">
-              En VIVANCOFFEE creemos que una cafetería
-              no solamente se trata del café.
-            </p>
-
-
-            <p class="experience__text">
-              Se trata de las conversaciones, las risas,
-              las fotos, las citas, las reuniones y esos
-              pequeños momentos que terminan convirtiéndose
-              en recuerdos.
-            </p>
-
-
-            <a
-              class="experience__button"
-              href="#galeria"
-            >
-              VER EL ESPACIO
-            </a>
+            <span class="experience__quote-author">
+              VIVANCOFFEE
+            </span>
 
           </div>
 
@@ -2415,75 +2423,179 @@
            GALERÍA
       ==================================================== -->
 
-      <section
-        class="gallery"
-        id="galeria"
-      >
+      <section class="gallery" id="galeria">
 
         <div class="gallery__container">
 
-
+          <!-- ENCABEZADO -->
           <div class="gallery__header">
 
-            <p class="gallery__eyebrow">
-              VIVANCOFFEE
-            </p>
+            <div class="gallery__heading">
 
+              <p class="gallery__eyebrow">
+                VIVANCOFFEE
+              </p>
 
-            <h2 class="gallery__title">
-              NUESTRO
-              <span>ESPACIO</span>
-            </h2>
+              <h2 class="gallery__title">
+                NUESTRO
+                <span>ESPACIO</span>
+              </h2>
+
+            </div>
+
+            <div class="gallery__intro">
+
+              <p>
+                Cada rincón cuenta una historia.
+              </p>
+
+              <p>
+                Aquí el café, la decoración y las tradiciones
+                se mezclan para crear momentos inolvidables.
+              </p>
+
+              <span class="gallery__line"></span>
+
+            </div>
 
           </div>
 
 
+          <!-- GALERÍA -->
           <div class="gallery__grid">
 
-
-            <figure
-              class="gallery__item gallery__item--large"
-            >
+            <!-- 01 — NUESTRO ESPACIO -->
+            <figure class="gallery__item gallery__item--main">
 
               <img
-                src="./src/assets/images/gallery-1.jpg"
+                class="gallery__image"
+                src="./src/assets/images/interior-vivancoffee.jpg"
                 alt="Interior de VIVANCOFFEE"
               />
 
+              <figcaption class="gallery__caption">
+
+                <span class="gallery__number">
+                  01
+                </span>
+
+                <span class="gallery__label">
+                  NUESTRO ESPACIO
+                </span>
+
+              </figcaption>
+
             </figure>
 
 
-            <figure class="gallery__item">
+            <!-- 02 — CAFÉ -->
+            <figure class="gallery__item gallery__item--coffee">
 
               <img
-                src="./src/assets/images/gallery-2.jpg"
-                alt="Decoración de VIVANCOFFEE"
-              />
-
-            </figure>
-
-
-            <figure class="gallery__item">
-
-              <img
-                src="./src/assets/images/gallery-3.jpg"
+                class="gallery__image"
+                src="./src/assets/images/cafe-vivancoffee.jpeg"
                 alt="Café de VIVANCOFFEE"
               />
 
+              <figcaption class="gallery__caption">
+
+                <span class="gallery__number">
+                  02
+                </span>
+
+                <span class="gallery__label">
+                  CAFÉ
+                </span>
+
+              </figcaption>
+
             </figure>
 
 
-            <figure
-              class="gallery__item gallery__item--wide"
-            >
+            <!-- 03 — DÍA DE LAS MADRES -->
+            <figure class="gallery__item gallery__item--mothers">
 
               <img
-                src="./src/assets/images/gallery-4.jpg"
-                alt="Clientes disfrutando VIVANCOFFEE"
+                class="gallery__image"
+                src="./src/assets/images/dia-madres-vivancoffee.jpeg"
+                alt="Día de las Madres en VIVANCOFFEE"
               />
+
+              <figcaption class="gallery__caption">
+
+                <span class="gallery__number">
+                  03
+                </span>
+
+                <span class="gallery__label">
+                  DÍA DE LAS MADRES
+                </span>
+
+              </figcaption>
 
             </figure>
 
+
+            <!-- 04 — MOMENTOS -->
+            <figure class="gallery__item gallery__item--moments">
+
+              <img
+                class="gallery__image"
+                src="./src/assets/images/clientes-vivancoffee.jpeg"
+                alt="Clientes disfrutando en VIVANCOFFEE"
+              />
+
+              <figcaption class="gallery__caption">
+
+                <span class="gallery__number">
+                  04
+                </span>
+
+                <span class="gallery__label">
+                  MOMENTOS
+                </span>
+
+              </figcaption>
+
+            </figure>
+
+
+            <!-- 05 — NAVIDAD -->
+            <figure class="gallery__item gallery__item--christmas">
+
+              <img
+                class="gallery__image"
+                src="./src/assets/images/navidad-vivancoffee.jpeg"
+                alt="Navidad en VIVANCOFFEE"
+              />
+
+              <figcaption class="gallery__caption">
+
+                <span class="gallery__number">
+                  05
+                </span>
+
+                <span class="gallery__label">
+                  NAVIDAD
+                </span>
+
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+
+          <!-- FRASE FINAL -->
+          <div class="gallery__quote">
+
+            <span class="gallery__quote-line"></span>
+
+            <p>
+              Un buen café siempre es una buena idea.
+            </p>
+
+            <span class="gallery__quote-line"></span>
 
           </div>
 
@@ -2492,11 +2604,7 @@
       </section>
 
 
-      <!-- ===================================================
-           UBICACIÓN
-      ==================================================== -->
-
-      <section
+<section
         class="location"
         id="ubicacion"
       >

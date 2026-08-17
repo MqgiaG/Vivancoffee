@@ -1,0 +1,915 @@
+/* =====================================================
+   EXPERIENCE
+   Diseño editorial / cafetería premium
+===================================================== */
+
+.experience {
+  position: relative;
+
+  padding: 140px 6vw 150px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 11, 8, 0.98),
+      rgba(28, 14, 9, 0.97)
+    );
+
+  color: var(--color-white);
+
+  isolation: isolate;
+}
+
+
+/* =====================================================
+   FONDO
+===================================================== */
+
+.experience::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      rgba(30, 14, 8, 0.78),
+      rgba(30, 14, 8, 0.94)
+    ),
+    url("../assets/images/hero-madera.png")
+      center / cover no-repeat;
+
+  opacity: 0.32;
+}
+
+
+.experience::after {
+  content: "";
+
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: -260px;
+  top: 18%;
+
+  z-index: -1;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(142, 154, 92, 0.11),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.experience__container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.experience__header {
+  max-width: 900px;
+
+  margin: 0 auto 95px;
+
+  text-align: center;
+}
+
+
+.experience__eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 18px;
+
+  margin: 0 0 24px;
+
+  color: var(--color-green);
+
+  font-family: var(--font-main);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.42em;
+
+  text-transform: uppercase;
+}
+
+
+.experience__eyebrow::before,
+.experience__eyebrow::after {
+  content: "";
+
+  width: 55px;
+  height: 1px;
+
+  background:
+    rgba(142, 154, 92, 0.65);
+}
+
+
+.experience__title {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  color: var(--color-white);
+
+  font-family: var(--font-brand);
+
+  font-size: clamp(
+    3.2rem,
+    7vw,
+    7rem
+  );
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  letter-spacing: 0.015em;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.48);
+}
+
+
+.experience__subtitle {
+  max-width: 760px;
+
+  margin: 32px auto 0;
+
+  color: var(--color-beige);
+
+  font-family: var(--font-main);
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+
+/* =====================================================
+   HISTORIA / NUESTRA ESENCIA
+   Sin tarjeta: diseño editorial
+===================================================== */
+
+.experience__intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(360px, 0.92fr);
+
+  gap: 75px;
+
+  align-items: stretch;
+
+  margin-bottom: 125px;
+}
+
+
+/* =====================================================
+   IMAGEN PRINCIPAL
+===================================================== */
+
+.experience__image-wrapper {
+  position: relative;
+
+  min-height: 650px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: #2a160d;
+
+  border:
+    1px solid
+    rgba(215, 184, 154, 0.24);
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.42);
+}
+
+
+.experience__image-wrapper::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 8, 5, 0.04) 35%,
+      rgba(15, 8, 5, 0.58) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+.experience__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 650px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.9s ease;
+}
+
+
+.experience__image-wrapper:hover
+.experience__image {
+  transform: scale(1.035);
+}
+
+
+.experience__image-caption {
+  position: absolute;
+
+  left: 34px;
+  bottom: 30px;
+
+  z-index: 2;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TEXTO EDITORIAL
+===================================================== */
+
+.experience__story {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 35px 10px 35px 10px;
+}
+
+
+.experience__label {
+  margin: 0 0 24px;
+
+  color: var(--color-green);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.34em;
+
+  text-transform: uppercase;
+}
+
+
+.experience__story-title {
+  max-width: 580px;
+
+  margin: 0 0 32px;
+
+  color: var(--color-beige);
+
+  font-family: var(--font-brand);
+
+  font-size: clamp(
+    2.6rem,
+    4vw,
+    4.8rem
+  );
+
+  font-weight: 600;
+
+  line-height: 1.02;
+
+  letter-spacing: 0.01em;
+}
+
+
+.experience__story-title::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 1px;
+
+  margin-top: 30px;
+
+  background:
+    rgba(142, 154, 92, 0.7);
+}
+
+
+.experience__story-text {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-family: var(--font-main);
+
+  font-size: 1rem;
+
+  line-height: 1.95;
+}
+
+
+.experience__story-text + .experience__story-text {
+  margin-top: 22px;
+}
+
+
+/* =====================================================
+   FIRMA / DETALLE
+===================================================== */
+
+.experience__story-signature {
+  margin-top: 42px;
+
+  color: var(--color-white);
+
+  font-family: var(--font-brand);
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+
+  opacity: 0.9;
+}
+
+
+.experience__story-signature::before {
+  content: "✦";
+
+  display: inline-block;
+
+  margin-right: 12px;
+
+  color: var(--color-green);
+
+  font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   FRASE DESTACADA
+===================================================== */
+
+.experience__quote {
+  max-width: 900px;
+
+  margin: 0 auto 125px;
+
+  padding: 70px 35px;
+
+  text-align: center;
+
+  border-top:
+    1px solid
+    rgba(142, 154, 92, 0.4);
+
+  border-bottom:
+    1px solid
+    rgba(142, 154, 92, 0.4);
+}
+
+
+.experience__quote-text {
+  margin: 0;
+
+  color: var(--color-beige);
+
+  font-family: var(--font-brand);
+
+  font-size: clamp(
+    2rem,
+    4.5vw,
+    4rem
+  );
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+.experience__quote-author {
+  display: block;
+
+  margin-top: 28px;
+
+  color: var(--color-green);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.4em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   GALERÍA DE EXPERIENCIA
+===================================================== */
+
+.experience__features {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+
+  margin-bottom: 110px;
+}
+
+
+/*
+   Estas tarjetas quedan preparadas para la galería.
+   Las usamos como imágenes, no como bloques de texto.
+*/
+
+.experience__feature {
+  position: relative;
+
+  min-height: 360px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  border:
+    1px solid
+    rgba(215, 184, 154, 0.2);
+
+  background:
+    #2a160d;
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease;
+}
+
+
+.experience__feature:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(142, 154, 92, 0.5);
+}
+
+
+.experience__feature-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 360px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease;
+}
+
+
+.experience__feature:hover
+.experience__feature-image {
+  transform: scale(1.045);
+}
+
+
+.experience__feature::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 40%,
+      rgba(12, 7, 4, 0.78) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   TEXTO SOBRE LAS IMÁGENES
+===================================================== */
+
+.experience__feature-content {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 28px;
+
+  z-index: 2;
+}
+
+
+.experience__feature-title {
+  margin: 0 0 8px;
+
+  color: var(--color-white);
+
+  font-family: var(--font-brand);
+
+  font-size: 1.7rem;
+
+  line-height: 1.1;
+}
+
+
+.experience__feature-text {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 0.88rem;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   CTA FINAL
+===================================================== */
+
+.experience__cta {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  padding: 55px 60px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(215, 184, 154, 0.2);
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(76, 39, 23, 0.88),
+      rgba(39, 20, 13, 0.94)
+    );
+}
+
+
+.experience__cta-content {
+  max-width: 700px;
+}
+
+
+.experience__cta-title {
+  margin: 0 0 12px;
+
+  color: var(--color-white);
+
+  font-family: var(--font-brand);
+
+  font-size: clamp(
+    2rem,
+    3vw,
+    3rem
+  );
+
+  line-height: 1.05;
+}
+
+
+.experience__cta-text {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  line-height: 1.7;
+}
+
+
+.experience__cta-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+
+  padding: 16px 28px;
+
+  border:
+    1px solid
+    rgba(142, 154, 92, 0.5);
+
+  border-radius: 10px;
+
+  background:
+    var(--color-green);
+
+  color: #17130d;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.experience__cta-button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    var(--color-beige);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media screen and (max-width: 1000px) {
+
+  .experience {
+    padding:
+      110px 5vw 125px;
+  }
+
+
+  .experience__intro {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .experience__image-wrapper,
+  .experience__image {
+    min-height: 520px;
+  }
+
+
+  .experience__story {
+    padding:
+      15px 10px 15px 0;
+  }
+
+
+  .experience__story-title,
+  .experience__story-text {
+    max-width: 750px;
+  }
+
+
+  .experience__features {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .experience__cta {
+    padding:
+      45px;
+  }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .experience {
+    padding:
+      85px 20px 100px;
+  }
+
+
+  .experience__header {
+    margin-bottom: 65px;
+  }
+
+
+  .experience__eyebrow {
+    gap: 10px;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.25em;
+  }
+
+
+  .experience__eyebrow::before,
+  .experience__eyebrow::after {
+    width: 25px;
+  }
+
+
+  .experience__title {
+    font-size:
+      clamp(
+        2.8rem,
+        13vw,
+        4.5rem
+      );
+  }
+
+
+  .experience__subtitle {
+    margin-top: 24px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+  }
+
+
+  .experience__intro {
+    gap: 40px;
+
+    margin-bottom: 90px;
+  }
+
+
+  .experience__image-wrapper,
+  .experience__image {
+    min-height: 420px;
+  }
+
+
+  .experience__image-wrapper {
+    border-radius: 20px;
+  }
+
+
+  .experience__image-caption {
+    left: 22px;
+    bottom: 20px;
+
+    font-size: 0.6rem;
+  }
+
+
+  .experience__story {
+    padding:
+      0 5px;
+  }
+
+
+  .experience__story-title {
+    font-size:
+      clamp(
+        2.3rem,
+        11vw,
+        3.5rem
+      );
+  }
+
+
+  .experience__story-text {
+    font-size: 0.92rem;
+
+    line-height: 1.85;
+  }
+
+
+  .experience__quote {
+    margin-bottom: 90px;
+
+    padding:
+      50px 10px;
+  }
+
+
+  .experience__quote-text {
+    font-size:
+      clamp(
+        1.8rem,
+        9vw,
+        2.8rem
+      );
+  }
+
+
+  .experience__features {
+    grid-template-columns:
+      1fr;
+
+    gap: 18px;
+  }
+
+
+  .experience__feature,
+  .experience__feature-image {
+    min-height: 330px;
+  }
+
+
+  .experience__cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding:
+      35px 28px;
+
+    border-radius: 20px;
+  }
+
+
+  .experience__cta-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .experience__image,
+  .experience__feature,
+  .experience__feature-image,
+  .experience__cta-button {
+    transition: none;
+  }
+
+}
