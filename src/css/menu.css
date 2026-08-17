@@ -1,0 +1,829 @@
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 120px 40px 100px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 10, 7, 0.94),
+      rgba(25, 12, 8, 0.98)
+    ),
+    url("../assets/images/hero-madera.png")
+      center / cover
+      no-repeat;
+
+  color: var(--color-white);
+
+  isolation: isolate;
+}
+
+
+/* =====================================================
+   DECORACIÓN
+===================================================== */
+
+.menu::before,
+.menu::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(108, 126, 76, 0.12),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+.menu::before {
+  top: 5%;
+  left: -180px;
+}
+
+
+.menu::after {
+  right: -180px;
+  bottom: 5%;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.menu__container {
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.menu__header {
+  max-width: 900px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+
+.menu__eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  margin: 0 0 20px;
+
+  font-family: var(--font-main);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.38em;
+
+  color: #87996a;
+
+  text-transform: uppercase;
+}
+
+
+.menu__eyebrow::before,
+.menu__eyebrow::after {
+  content: "";
+
+  width: 55px;
+  height: 1px;
+
+  background:
+    rgba(135, 153, 106, 0.75);
+}
+
+
+.menu__title {
+  margin: 0;
+
+  font-family: var(--font-brand);
+
+  font-size: clamp(
+    3rem,
+    7vw,
+    6rem
+  );
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: 0.03em;
+
+  color: #f8f0e7;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+
+.menu__subtitle {
+  max-width: 620px;
+
+  margin: 25px auto 0;
+
+  font-family: var(--font-main);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  color: rgba(248, 240, 231, 0.75);
+}
+
+
+/* =====================================================
+   DESCARGAR MENÚ
+===================================================== */
+
+.menu__download {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 32px;
+
+  padding: 15px 28px;
+
+  border: 1px solid
+    rgba(215, 184, 154, 0.55);
+
+  border-radius: 12px;
+
+  background:
+    rgba(48, 27, 17, 0.75);
+
+  color: var(--color-beige);
+
+  font-family: var(--font-main);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.menu__download:hover {
+  transform: translateY(-3px);
+
+  background:
+    rgba(108, 126, 76, 0.35);
+
+  border-color:
+    rgba(166, 180, 132, 0.8);
+}
+
+
+/* =====================================================
+   CATEGORÍAS
+===================================================== */
+
+.menu__categories {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+
+  margin-top: 55px;
+}
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.menu__category {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid
+    rgba(215, 184, 154, 0.25);
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(58, 31, 19, 0.92),
+      rgba(27, 14, 9, 0.96)
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.menu__category::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #87996a,
+      transparent
+    );
+
+  opacity: 0.7;
+}
+
+
+.menu__category:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(215, 184, 154, 0.5);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =====================================================
+   BOTÓN DE CATEGORÍA
+===================================================== */
+
+.menu__category-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 25px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--color-white);
+
+  font-family: var(--font-main);
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   ÍCONO
+===================================================== */
+
+.menu__category-icon {
+  flex-shrink: 0;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(215, 184, 154, 0.35);
+
+  border-radius: 50%;
+
+  background:
+    rgba(108, 126, 76, 0.16);
+
+  font-size: 1.5rem;
+
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.menu__category:hover
+.menu__category-icon {
+  transform: scale(1.08);
+
+  background:
+    rgba(108, 126, 76, 0.28);
+}
+
+
+/* =====================================================
+   NOMBRE
+===================================================== */
+
+.menu__category-name {
+  flex: 1;
+
+  margin: 0;
+
+  font-size: 1.2rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  color: #f8f0e7;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   FLECHA
+===================================================== */
+
+.menu__category-arrow {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(215, 184, 154, 0.4);
+
+  border-radius: 50%;
+
+  color: var(--color-beige);
+
+  font-size: 1.2rem;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.menu__category.is-open
+.menu__category-arrow {
+  transform: rotate(45deg);
+
+  background:
+    rgba(135, 153, 106, 0.18);
+}
+
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+.menu__category-content {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows 0.45s ease;
+}
+
+
+.menu__category.is-open
+.menu__category-content {
+  grid-template-rows: 1fr;
+}
+
+
+.menu__category-inner {
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.menu__items {
+  margin: 0;
+
+  padding: 0 25px 28px;
+
+  list-style: none;
+}
+
+
+/* =====================================================
+   SUBCATEGORÍA
+===================================================== */
+
+.menu__group {
+  margin-top: 25px;
+}
+
+
+.menu__group:first-child {
+  margin-top: 0;
+}
+
+
+.menu__group-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 0 0 15px;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+
+  color: #9aaa7b;
+
+  text-transform: uppercase;
+}
+
+
+.menu__group-title::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    rgba(135, 153, 106, 0.3);
+}
+
+
+/* =====================================================
+   ITEM
+===================================================== */
+
+.menu__item {
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  gap: 20px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid
+    rgba(215, 184, 154, 0.1);
+}
+
+
+.menu__item:last-child {
+  border-bottom: 0;
+}
+
+
+.menu__item-name {
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: #f7eee4;
+}
+
+
+.menu__item-description {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 0.78rem;
+
+  line-height: 1.5;
+
+  color:
+    rgba(215, 184, 154, 0.65);
+}
+
+
+.menu__item-price {
+  align-self: start;
+
+  padding-top: 2px;
+
+  font-size: 0.95rem;
+
+  font-weight: 800;
+
+  color: #d7b89a;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   NOTA
+===================================================== */
+
+.menu__note {
+  margin-top: 18px;
+
+  padding: 12px 15px;
+
+  border-left: 2px solid #87996a;
+
+  background:
+    rgba(135, 153, 106, 0.08);
+
+  color:
+    rgba(248, 240, 231, 0.65);
+
+  font-size: 0.75rem;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   CATEGORÍA DESTACADA
+===================================================== */
+
+.menu__category--featured {
+  border-color:
+    rgba(135, 153, 106, 0.45);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(76, 84, 49, 0.25),
+      rgba(28, 15, 9, 0.96)
+    );
+}
+
+
+.menu__category--featured
+.menu__category-icon {
+  background:
+    rgba(135, 153, 106, 0.25);
+}
+
+
+/* =====================================================
+   FRASE FINAL
+===================================================== */
+
+.menu__closing {
+  max-width: 650px;
+
+  margin: 70px auto 0;
+
+  text-align: center;
+}
+
+
+.menu__closing-line {
+  width: 100px;
+  height: 1px;
+
+  margin: 0 auto 22px;
+
+  background:
+    rgba(215, 184, 154, 0.45);
+}
+
+
+.menu__closing-text {
+  margin: 0;
+
+  font-family: var(--font-brand);
+
+  font-size: clamp(
+    1.5rem,
+    3vw,
+    2.5rem
+  );
+
+  color: var(--color-beige);
+}
+
+
+.menu__closing-subtitle {
+  margin: 12px 0 0;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(248, 240, 231, 0.55);
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media screen and (max-width: 900px) {
+
+  .menu {
+    padding:
+      100px
+      25px
+      80px;
+  }
+
+
+  .menu__categories {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .menu {
+    padding:
+      90px
+      16px
+      70px;
+  }
+
+
+  .menu__header {
+    margin-bottom: 40px;
+  }
+
+
+  .menu__eyebrow {
+    font-size: 0.65rem;
+
+    letter-spacing: 0.25em;
+
+    gap: 10px;
+  }
+
+
+  .menu__eyebrow::before,
+  .menu__eyebrow::after {
+    width: 30px;
+  }
+
+
+  .menu__subtitle {
+    font-size: 0.9rem;
+  }
+
+
+  .menu__categories {
+    gap: 15px;
+
+    margin-top: 40px;
+  }
+
+
+  .menu__category-button {
+    padding: 19px;
+  }
+
+
+  .menu__category-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.2rem;
+  }
+
+
+  .menu__category-name {
+    font-size: 0.9rem;
+
+    letter-spacing: 0.05em;
+  }
+
+
+  .menu__category-arrow {
+    width: 32px;
+    height: 32px;
+
+    font-size: 1rem;
+  }
+
+
+  .menu__items {
+    padding:
+      0
+      19px
+      22px;
+  }
+
+
+  .menu__item {
+    gap: 12px;
+  }
+
+
+  .menu__item-name {
+    font-size: 0.88rem;
+  }
+
+
+  .menu__item-description {
+    font-size: 0.72rem;
+  }
+
+
+  .menu__item-price {
+    font-size: 0.85rem;
+  }
+
+
+  .menu__closing {
+    margin-top: 55px;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .menu__category,
+  .menu__category-icon,
+  .menu__category-arrow,
+  .menu__category-content,
+  .menu__download {
+    transition: none;
+  }
+
+}

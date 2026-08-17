@@ -1,656 +1,2801 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta
+      name="description"
+      content="Vivancoffee — Cafetería y Repostería. Un rincón bonito para disfrutar sabores únicos y momentos especiales."
+    />
 
-  <meta
-    name="description"
-    content="Vivancoffee — cafetería y repostería. Un rincón para disfrutar."
-  >
+    <title>VIVANCOFFEE | Cafetería & Repostería</title>
 
-  <title>
-    VIVANCOFFEE | Cafetería & Repostería
-  </title>
+    <link
+      rel="stylesheet"
+      href="./src/css/styles.css"
+    />
+  </head>
 
-  <!-- =====================================================
-       FUENTES
-  ====================================================== -->
+  <body>
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+    <!-- =====================================================
+         LOADER
+    ====================================================== -->
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+    <div id="loader" class="loader">
 
-  <link
-    href="https://api.fontshare.com/v2/css?f[]=pally@400,500,600,700&f[]=chillax@400,500,600,700&display=swap"
-    rel="stylesheet"
-  >
+      <div class="loader__beans" aria-hidden="true">
+        <span class="coffee-bean coffee-bean--1"></span>
+        <span class="coffee-bean coffee-bean--2"></span>
+        <span class="coffee-bean coffee-bean--3"></span>
+        <span class="coffee-bean coffee-bean--4"></span>
+        <span class="coffee-bean coffee-bean--5"></span>
+        <span class="coffee-bean coffee-bean--6"></span>
+        <span class="coffee-bean coffee-bean--7"></span>
+        <span class="coffee-bean coffee-bean--8"></span>
+        <span class="coffee-bean coffee-bean--9"></span>
+        <span class="coffee-bean coffee-bean--10"></span>
+        <span class="coffee-bean coffee-bean--11"></span>
+        <span class="coffee-bean coffee-bean--12"></span>
+        <span class="coffee-bean coffee-bean--13"></span>
+        <span class="coffee-bean coffee-bean--14"></span>
+        <span class="coffee-bean coffee-bean--15"></span>
+        <span class="coffee-bean coffee-bean--16"></span>
+        <span class="coffee-bean coffee-bean--17"></span>
+        <span class="coffee-bean coffee-bean--18"></span>
+        <span class="coffee-bean coffee-bean--19"></span>
+        <span class="coffee-bean coffee-bean--20"></span>
+        <span class="coffee-bean coffee-bean--21"></span>
+        <span class="coffee-bean coffee-bean--22"></span>
+        <span class="coffee-bean coffee-bean--23"></span>
+        <span class="coffee-bean coffee-bean--24"></span>
+        <span class="coffee-bean coffee-bean--25"></span>
+        <span class="coffee-bean coffee-bean--26"></span>
+        <span class="coffee-bean coffee-bean--27"></span>
+        <span class="coffee-bean coffee-bean--28"></span>
+        <span class="coffee-bean coffee-bean--29"></span>
+        <span class="coffee-bean coffee-bean--30"></span>
+        <span class="coffee-bean coffee-bean--31"></span>
+        <span class="coffee-bean coffee-bean--32"></span>
+        <span class="coffee-bean coffee-bean--33"></span>
+        <span class="coffee-bean coffee-bean--34"></span>
+        <span class="coffee-bean coffee-bean--35"></span>
+      </div>
 
+      <div class="loader__content">
 
-  <!-- =====================================================
-       CSS
-  ====================================================== -->
+        <img
+          class="loader__coffee"
+          src="./src/assets/images/vivancoffee-loading.png"
+          alt="Vivancoffee"
+        />
 
-  <link
-    rel="stylesheet"
-    href="./src/css/styles.css"
-  >
+        <h1 class="loader__title">
+          VIVANCOFFEE
+        </h1>
 
-</head>
+        <p class="loader__text">
+          MOLIENDO LOS GRANOS...
+        </p>
 
-
-<body>
-
-  <!-- =====================================================
-       LOADER
-  ====================================================== -->
-
-  <div
-    class="loader"
-    id="loader"
-  >
-
-    <div class="loader__beans">
-
-      <span class="coffee-bean coffee-bean--1"></span>
-      <span class="coffee-bean coffee-bean--2"></span>
-      <span class="coffee-bean coffee-bean--3"></span>
-      <span class="coffee-bean coffee-bean--4"></span>
-      <span class="coffee-bean coffee-bean--5"></span>
-      <span class="coffee-bean coffee-bean--6"></span>
-      <span class="coffee-bean coffee-bean--7"></span>
-      <span class="coffee-bean coffee-bean--8"></span>
-      <span class="coffee-bean coffee-bean--9"></span>
-      <span class="coffee-bean coffee-bean--10"></span>
-      <span class="coffee-bean coffee-bean--11"></span>
-      <span class="coffee-bean coffee-bean--12"></span>
-      <span class="coffee-bean coffee-bean--13"></span>
-
-      <span class="coffee-bean coffee-bean--14"></span>
-      <span class="coffee-bean coffee-bean--15"></span>
-      <span class="coffee-bean coffee-bean--16"></span>
-      <span class="coffee-bean coffee-bean--17"></span>
-      <span class="coffee-bean coffee-bean--18"></span>
-      <span class="coffee-bean coffee-bean--19"></span>
-      <span class="coffee-bean coffee-bean--20"></span>
-      <span class="coffee-bean coffee-bean--21"></span>
-      <span class="coffee-bean coffee-bean--22"></span>
-      <span class="coffee-bean coffee-bean--23"></span>
-      <span class="coffee-bean coffee-bean--24"></span>
-      <span class="coffee-bean coffee-bean--25"></span>
-
-      <span class="coffee-bean coffee-bean--26"></span>
-      <span class="coffee-bean coffee-bean--27"></span>
-      <span class="coffee-bean coffee-bean--28"></span>
-      <span class="coffee-bean coffee-bean--29"></span>
-      <span class="coffee-bean coffee-bean--30"></span>
-      <span class="coffee-bean coffee-bean--31"></span>
-      <span class="coffee-bean coffee-bean--32"></span>
-      <span class="coffee-bean coffee-bean--33"></span>
-      <span class="coffee-bean coffee-bean--34"></span>
-      <span class="coffee-bean coffee-bean--35"></span>
-
-    </div>
-
-
-    <div class="loader__content">
-
-      <img
-        class="loader__coffee"
-        src="./src/assets/images/vivancoffee-loading.png"
-        alt="Vivancoffee"
-      >
-
-      <h1 class="loader__title">
-        VIVANCOFFEE
-      </h1>
-
-      <p class="loader__text">
-        MOLIENDO LOS GRANOS...
-      </p>
-
-      <div class="loader__line">
-
-        <div
-          class="loader__progress"
-        ></div>
+        <div class="loader__line">
+          <div class="loader__progress"></div>
+        </div>
 
       </div>
 
     </div>
 
-  </div>
 
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
+    <header class="header">
 
-  <header class="header">
-
-    <div class="header__container">
-
-      <a
-        href="#inicio"
-        class="header__logo"
-      >
-        VIVANCOFFEE
-      </a>
-
-
-      <nav
-        class="header__nav"
-        aria-label="Navegación principal"
-      >
+      <div class="header__container">
 
         <a
+          class="header__logo"
           href="#inicio"
-          class="header__link"
+          aria-label="Ir al inicio de Vivancoffee"
         >
-          INICIO
+          VIVANCOFFEE
         </a>
 
-        <a
-          href="#menu"
-          class="header__link"
+
+        <nav
+          class="header__nav"
+          aria-label="Navegación principal"
         >
-          MENÚ
-        </a>
 
-        <a
-          href="#nosotros"
-          class="header__link"
+          <a
+            class="header__link"
+            href="#inicio"
+          >
+            INICIO
+          </a>
+
+          <a
+            class="header__link"
+            href="#menu"
+          >
+            MENÚ
+          </a>
+
+          <a
+            class="header__link"
+            href="#experiencia"
+          >
+            NOSOTROS
+          </a>
+
+          <a
+            class="header__link"
+            href="#galeria"
+          >
+            GALERÍA
+          </a>
+
+          <a
+            class="header__link"
+            href="#ubicacion"
+          >
+            UBICACIÓN
+          </a>
+
+          <a
+            class="header__link"
+            href="#contacto"
+          >
+            CONTACTO
+          </a>
+
+          <a
+            class="header__button"
+            href="#menu"
+          >
+            VER MENÚ
+          </a>
+
+        </nav>
+
+
+        <button
+          class="header__menu-button"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
         >
-          NOSOTROS
-        </a>
 
-        <a
-          href="#galeria"
-          class="header__link"
-        >
-          GALERÍA
-        </a>
+          <span></span>
+          <span></span>
+          <span></span>
 
-        <a
-          href="#ubicacion"
-          class="header__link"
-        >
-          UBICACIÓN
-        </a>
+        </button>
 
-        <a
-          href="#contacto"
-          class="header__link"
-        >
-          CONTACTO
-        </a>
+      </div>
 
-        <a
-          href="#menu"
-          class="header__link"
-        >
-          VER MENÚ
-        </a>
-
-      </nav>
+    </header>
 
 
-      <button
-        class="header__menu-button"
-        type="button"
-        aria-label="Abrir menú"
+    <!-- =====================================================
+         CONTENIDO
+    ====================================================== -->
+
+    <main>
+
+
+      <!-- ===================================================
+           HERO
+      ==================================================== -->
+
+      <section
+        class="hero"
+        id="inicio"
       >
 
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-    </div>
-
-  </header>
+        <div class="hero__container">
 
 
-  <main>
+          <!-- PIZARRÓN -->
 
-    <!-- ===================================================
-         HERO
-    ==================================================== -->
-
-    <section
-      class="hero"
-      id="inicio"
-    >
-
-      <div class="hero__container">
-
-
-        <!-- ===============================================
-             PIZARRÓN
-        ================================================ -->
-
-        <div
-          class="hero__illustration hero__illustration--board"
-        >
-
-          <img
-            src="./src/assets/images/pizarron.png"
-            alt="Pizarrón de Vivancoffee"
+          <div
+            class="hero__illustration hero__illustration--board"
+            aria-hidden="true"
           >
 
-        </div>
-
-
-        <!-- ===============================================
-             CONTENIDO CENTRAL
-        ================================================ -->
-
-        <div class="hero__content">
-
-
-          <!-- EYEBROW -->
-
-          <div class="hero__eyebrow">
-
-            <span
-              class="hero__eyebrow-line"
-            ></span>
-
-            <span>
-              CAFETERÍA &amp; REPOSTERÍA
-            </span>
-
-            <span
-              class="hero__eyebrow-line"
-            ></span>
+            <img
+              src="./src/assets/images/pizarron.png"
+              alt=""
+            />
 
           </div>
 
 
-          <!-- TÍTULO -->
+          <!-- CONTENIDO -->
 
-          <h1 class="hero__title">
-            VIVANCOFFEE
-          </h1>
+          <div class="hero__content">
 
+            <div class="hero__eyebrow">
 
-          <!-- SUBTÍTULO -->
+              <span
+                class="hero__eyebrow-line"
+              ></span>
 
-          <div class="hero__subtitle">
-
-            <span
-              class="hero__subtitle-line"
-            ></span>
-
-            <h2>
-              Un rincón para disfrutar
-            </h2>
-
-            <span
-              class="hero__subtitle-line"
-            ></span>
-
-          </div>
-
-
-          <!-- DESCRIPCIÓN -->
-
-          <p class="hero__description">
-
-            Sabores únicos, un ambiente carismático
-            y un espacio hecho para disfrutar,
-            compartir y quedarse un rato más.
-
-          </p>
-
-
-          <!-- BOTONES -->
-
-          <div class="hero__actions">
-
-            <a
-              href="#menu"
-              class="hero__button hero__button--primary"
-            >
-
-              <span class="hero__button-icon">
-                ☕
+              <span>
+                CAFETERÍA &amp; REPOSTERÍA
               </span>
 
-              VER MENÚ
+              <span
+                class="hero__eyebrow-line"
+              ></span>
 
-            </a>
+            </div>
 
 
-            <a
-              href="#nosotros"
-              class="hero__button hero__button--secondary"
-            >
+            <h1 class="hero__title">
+              VIVANCOFFEE
+            </h1>
 
-              <span class="hero__button-icon">
-                🌿
-              </span>
 
-              CONOCE VIVANCOFFEE
+            <div class="hero__subtitle">
 
-            </a>
+              <span
+                class="hero__subtitle-line"
+              ></span>
+
+              <h2>
+                Un rincón para disfrutar
+              </h2>
+
+              <span
+                class="hero__subtitle-line"
+              ></span>
+
+            </div>
+
+
+            <p class="hero__description">
+              Sabores únicos, un ambiente carismático
+              y un espacio hecho para disfrutar,
+              compartir y quedarse un rato más.
+            </p>
+
+
+            <div class="hero__actions">
+
+              <a
+                href="#menu"
+                class="hero__button hero__button--primary"
+              >
+
+                <span class="hero__button-icon">
+                  ☕
+                </span>
+
+                VER MENÚ
+
+              </a>
+
+
+              <a
+                href="#experiencia"
+                class="hero__button hero__button--secondary"
+              >
+
+                <span class="hero__button-icon">
+                  🌿
+                </span>
+
+                CONOCE VIVANCOFFEE
+
+              </a>
+
+            </div>
 
           </div>
 
-        </div>
 
+          <!-- TAZA -->
 
-        <!-- ===============================================
-             TAZA DE CAFÉ
-        ================================================ -->
-
-        <div
-          class="hero__illustration hero__illustration--coffee"
-        >
-
-          <img
-            src="./src/assets/images/taza-cafe.png"
-            alt="Taza de café de Vivancoffee"
+          <div
+            class="hero__illustration hero__illustration--coffee"
+            aria-hidden="true"
           >
 
-        </div>
+            <img
+              src="./src/assets/images/taza-cafe.png"
+              alt=""
+            />
+
+          </div>
 
 
-        <!-- ===============================================
-             DECORACIONES
-        ================================================ -->
+          <!-- CORAZONES -->
 
-        <span
-          class="hero__heart hero__heart--one"
-          aria-hidden="true"
-        >
-          ♡
-        </span>
-
-
-        <span
-          class="hero__heart hero__heart--two"
-          aria-hidden="true"
-        >
-          ♡
-        </span>
-
-
-        <span
-          class="hero__heart hero__heart--three"
-          aria-hidden="true"
-        >
-          ♡
-        </span>
-
-
-        <span
-          class="hero__spark hero__spark--one"
-          aria-hidden="true"
-        >
-          ✦
-        </span>
-
-
-        <span
-          class="hero__spark hero__spark--two"
-          aria-hidden="true"
-        >
-          ✦
-        </span>
-
-
-        <span
-          class="hero__spark hero__spark--three"
-          aria-hidden="true"
-        >
-          ✦
-        </span>
-
-
-        <!-- HOJAS -->
-
-        <span
-          class="hero__leaf hero__leaf--1"
-          aria-hidden="true"
-        ></span>
-
-        <span
-          class="hero__leaf hero__leaf--2"
-          aria-hidden="true"
-        ></span>
-
-        <span
-          class="hero__leaf hero__leaf--3"
-          aria-hidden="true"
-        ></span>
-
-        <span
-          class="hero__leaf hero__leaf--4"
-          aria-hidden="true"
-        ></span>
-
-
-        <!-- MESA -->
-
-        <div
-          class="hero__table"
-          aria-hidden="true"
-        ></div>
-
-
-        <!-- SCROLL -->
-
-        <div class="hero__scroll">
-
-          <span>
-            DESCUBRE
+          <span
+            class="hero__heart hero__heart--one"
+            aria-hidden="true"
+          >
+            ♡
           </span>
 
           <span
-            class="hero__scroll-arrow"
+            class="hero__heart hero__heart--two"
+            aria-hidden="true"
           >
-            ↓
+            ♡
           </span>
+
+          <span
+            class="hero__heart hero__heart--three"
+            aria-hidden="true"
+          >
+            ♡
+          </span>
+
+
+          <!-- DESTELLOS -->
+
+          <span
+            class="hero__spark hero__spark--one"
+            aria-hidden="true"
+          >
+            ✦
+          </span>
+
+          <span
+            class="hero__spark hero__spark--two"
+            aria-hidden="true"
+          >
+            ✦
+          </span>
+
+          <span
+            class="hero__spark hero__spark--three"
+            aria-hidden="true"
+          >
+            ✦
+          </span>
+
+
+          <!-- HOJAS -->
+
+          <span
+            class="hero__leaf hero__leaf--1"
+            aria-hidden="true"
+          ></span>
+
+          <span
+            class="hero__leaf hero__leaf--2"
+            aria-hidden="true"
+          ></span>
+
+          <span
+            class="hero__leaf hero__leaf--3"
+            aria-hidden="true"
+          ></span>
+
+          <span
+            class="hero__leaf hero__leaf--4"
+            aria-hidden="true"
+          ></span>
+
+
+          <!-- MESA -->
+
+          <div
+            class="hero__table"
+            aria-hidden="true"
+          ></div>
+
+
+          <!-- SCROLL -->
+
+          <a
+            class="hero__scroll"
+            href="#menu"
+            aria-label="Descubrir el menú"
+          >
+
+            <span>
+              DESCUBRE
+            </span>
+
+            <span class="hero__scroll-arrow">
+              ↓
+            </span>
+
+          </a>
 
         </div>
 
-      </div>
-
-    </section>
+      </section>
 
 
-    <!-- ===================================================
-         MENÚ
-    ==================================================== -->
+      <!-- ===================================================
+           MENÚ
+      ==================================================== -->
 
-    <section
-      class="menu"
-      id="menu"
-    >
+      <section
+        class="menu"
+        id="menu"
+      >
 
-      <div class="menu__container">
+        <div class="menu__container">
 
-        <div class="menu__header">
+          <div class="menu__header">
 
-          <span class="menu__eyebrow">
-            NUESTROS FAVORITOS
-          </span>
+            <span class="menu__eyebrow">
+              NUESTROS SABORES
+            </span>
 
-          <h2 class="menu__title">
-            El sabor de Vivancoffee
-          </h2>
+            <h2 class="menu__title">
+              HECHO PARA
+              <span>DISFRUTARSE</span>
+            </h2>
 
-          <p class="menu__description">
-            Café, repostería y momentos preparados
-            para disfrutarse.
+            <p class="menu__subtitle">
+              Desde un café recién preparado hasta
+              algo dulce para acompañarlo.
+            </p>
+
+            <button
+              class="menu__download"
+              id="menuDownload"
+              type="button"
+            >
+              <span aria-hidden="true">📄</span>
+              DESCARGAR MENÚ COMPLETO
+            </button>
+
+          </div>
+
+
+          <div class="menu__categories">
+
+
+            <!-- =================================================
+                 BEBIDAS
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  ☕
+                </span>
+
+                <span class="menu__category-name">
+                  BEBIDAS
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__group">
+
+                      <h4 class="menu__group-title">
+                        CAFÉ CALIENTE
+                      </h4>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Americano
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          CH $45 · GD $60
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Cappuccino
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          CH $55 · GD $75
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Latte
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          CH $55 · GD $75
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Moka
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          CH $65 · GD $80
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Latte de sabor
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Avellana, vainilla, chocolate
+                            o caramelo.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          CH $65 · GD $80
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="menu__group">
+
+                      <h4 class="menu__group-title">
+                        TÉS
+                      </h4>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Té
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Limón, hierbabuena, manzanilla,
+                            manzana-canela, té verde
+                            o frutos rojos.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $30
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Té con leche
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Chai, hierbabuena
+                            o frutos rojos.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $45
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="menu__group">
+
+                      <h4 class="menu__group-title">
+                        BEBIDAS FRÍAS
+                      </h4>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Americano con hielo
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $50
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Latte frío
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $65
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Latte de sabor frío
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $75
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Malteada
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Con crema batida y cereza.
+                            Fresa, vainilla, chocolate,
+                            nuez o chicle.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $55
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frappé
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Vainilla o chocolate.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $70
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frappuccino
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $80
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frappé Oreo
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $70
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frappé Gansito
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $75
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frappé Ferrero
+                          </h3>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $85
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frappé Chamoy
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Fresa o mango con gomitas.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $75
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frappé Magnum
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Con paleta.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $90
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Té helado
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Limón, hierbabuena
+                            o frutos rojos.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $40
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="menu__note">
+
+                      <strong>
+                        Extras
+                      </strong>
+
+                      Leche de almendras +$6 ·
+                      Espresso extra $15
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CREPAS DULCES
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  🥞
+                </span>
+
+                <span class="menu__category-name">
+                  CREPAS DULCES
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa Clásica
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Nutella, plátano, lechera y nuez.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $75
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa Philadelphia
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Queso crema, mermelada de fresa,
+                          fresas y lechera.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $75
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa Nevada
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Chantilly, plátano o fresa,
+                          jarabe de chocolate o fresa
+                          y helado a elegir.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Oreo
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Chantilly, Nutella,
+                          fresas y galletas Oreo.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 WAFFLES DULCES
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  🧇
+                </span>
+
+                <span class="menu__category-name">
+                  WAFFLES DULCES
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Waffles Sencillos
+                        </h3>
+
+                        <p class="menu__item-description">
+                          A elegir plátano o fresa,
+                          lechera y Nutella.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $75
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Waffles Mazapán
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Cajeta, plátano,
+                          mazapán y lechera.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Waffles Delicia
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Chantilly, fresa y plátano,
+                          jarabe de chocolate.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $75
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Waffles Maple
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Plátano o fresa,
+                          Maple y cereal a elegir.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $75
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CREPAS SALADAS
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  🥞
+                </span>
+
+                <span class="menu__category-name">
+                  CREPAS SALADAS
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepizza
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Queso asadero, salsa de tomate
+                          y pepperoni, acompañada de
+                          chimichurri de la casa.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa Jamón
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Queso asadero, queso amarillo
+                          y jamón, acompañada de
+                          chimichurri de la casa.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa 3 quesos
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Queso asadero, manchego
+                          y queso americano,
+                          acompañada de chimichurri.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 WAFFLES SALADOS
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  🧇
+                </span>
+
+                <span class="menu__category-name">
+                  WAFFLES SALADOS
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Waffle Pepperoni
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Queso asadero,
+                          salsa de tomate y pepperoni.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $85
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Waffle Jamón
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Queso asadero, queso amarillo
+                          y jamón.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $85
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 BEBIDAS ESPECIALES
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  ✨
+                </span>
+
+                <span class="menu__category-name">
+                  BEBIDAS ESPECIALES
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Matcha latte caliente
+                        </h3>
+                      </div>
+
+                      <span class="menu__item-price">
+                        CH $65 · GD $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Taro latte caliente
+                        </h3>
+                      </div>
+
+                      <span class="menu__item-price">
+                        CH $65 · GD $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Chocolate caliente
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Con malvaviscos.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $65
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Chocolate frío
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Con crema batida.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $65
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Frappé chocolate blanco
+                        </h3>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $75
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Matcha Frappé
+                        </h3>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $85
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Taro Frappé
+                        </h3>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Frappé Mazapán
+                        </h3>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $70
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Afogato
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Helado de vainilla
+                          y shot doble de espresso.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $75
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Coca Cola
+                        </h3>
+
+                        <p class="menu__item-description">
+                          355 ml.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $20
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Agua
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Botella 1 lt.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $15
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CREPAS ESPECIALES
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  🍫
+                </span>
+
+                <span class="menu__category-name">
+                  CREPAS ESPECIALES
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa Ferrero
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Nutella, fresa, Ferrero,
+                          chocolate líquido y nuez.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $90
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa Kinder
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Queso Philadelphia, plátano,
+                          pastelito Kinder Delice
+                          y chocolate líquido.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $90
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Crepa Cajeta
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Cajeta, plátano,
+                          mazapán y lechera.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Waffle Nevado
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Chantilly, plátano y fresa,
+                          nieve de vainilla, Oreo
+                          o chocolate, lechera,
+                          chocolate y cereal a elegir.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $85
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 OTROS SALADOS
+            ================================================== -->
+
+            <article class="menu__category menu__category--featured">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  🍟
+                </span>
+
+                <span class="menu__category-name">
+                  OTROS SALADOS
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Baguette
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Jitomate, cebolla,
+                          lechuga y aguacate.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Jamón de pavo
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Baguette con jamón de pavo.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Pollo
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Baguette con pollo.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Chorizo
+                        </h3>
+
+                        <p class="menu__item-description">
+                          Baguette con chorizo.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Jamón serrano
+                        </h3>
+
+                        <p class="menu__item-description">
+                          A elegir Philadelphia
+                          o mayonesa.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $100
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Salmón
+                        </h3>
+
+                        <p class="menu__item-description">
+                          A elegir Philadelphia
+                          o mayonesa.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $100
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Papas a la francesa sencillas
+                        </h3>
+
+                        <p class="menu__item-description">
+                          200 gr de papas con catsup
+                          y chimichurri.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $50
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Papas a la francesa dobles
+                        </h3>
+
+                        <p class="menu__item-description">
+                          400 gr de papas con catsup
+                          y chimichurri.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Salchipapas
+                        </h3>
+
+                        <p class="menu__item-description">
+                          200 gr de papas más salchicha
+                          dorada con catsup y chimichurri.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $70
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Choripapas
+                        </h3>
+
+                        <p class="menu__item-description">
+                          200 gr de papas más queso
+                          asadero y chorizo con catsup
+                          y chimichurri.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $80
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Orden de Nachos sencilla
+                        </h3>
+
+                        <p class="menu__item-description">
+                          100 gr de tostitos nachos
+                          con queso amarillo y jalapeño.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $55
+                      </span>
+
+                    </div>
+
+
+                    <div class="menu__item">
+
+                      <div>
+                        <h3 class="menu__item-name">
+                          Dorinachos
+                        </h3>
+
+                        <p class="menu__item-description">
+                          100 gr de tostitos nachos
+                          más Doritos Nacho con queso
+                          amarillo y jalapeño.
+                        </p>
+                      </div>
+
+                      <span class="menu__item-price">
+                        $70
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 DESAYUNOS
+            ================================================== -->
+
+            <article class="menu__category">
+
+              <button
+                class="menu__category-button"
+                type="button"
+                aria-expanded="false"
+              >
+
+                <span
+                  class="menu__category-icon"
+                  aria-hidden="true"
+                >
+                  🍳
+                </span>
+
+                <span class="menu__category-name">
+                  DESAYUNOS
+                </span>
+
+                <span
+                  class="menu__category-arrow"
+                  aria-hidden="true"
+                >
+                  +
+                </span>
+
+              </button>
+
+
+              <div class="menu__category-content">
+
+                <div class="menu__category-inner">
+
+                  <div class="menu__items">
+
+
+                    <div class="menu__group">
+
+                      <h4 class="menu__group-title">
+                        BATIDOS CON PROTEÍNA
+                      </h4>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Choco-plátano
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Leche de tu preferencia,
+                            plátano, 1 scoop de proteína
+                            y cacao.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $70
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Plátano manía
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Leche de tu preferencia,
+                            crema de cacahuate, plátano
+                            y 1 scoop de proteína.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $75
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Vainilla-coco
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Leche de tu preferencia,
+                            crema de coco, vainilla
+                            y 1 scoop de proteína.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $75
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="menu__group">
+
+                      <h4 class="menu__group-title">
+                        BOWL CON PROTEÍNA
+                      </h4>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Crema de cacahuate
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Avena cocida en leche,
+                            yogurt griego, scoop de proteína,
+                            2 frutas, crema de cacahuate
+                            y nuez.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $95
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Canela
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Avena cocida en leche,
+                            yogurt griego, scoop de proteína,
+                            2 frutas, canela,
+                            arándanos y nuez.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $90
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="menu__group">
+
+                      <h4 class="menu__group-title">
+                        SMOOTHIES CON PROTEÍNA
+                      </h4>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Frutos rojos
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Leche de tu preferencia,
+                            frutos rojos congelados,
+                            scoop de proteína vainilla
+                            y miel.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $90
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Fresa
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Leche de tu preferencia,
+                            fresas congeladas,
+                            scoop de proteína vainilla
+                            y miel.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $85
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Mango
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Leche de tu preferencia,
+                            mango congelado,
+                            scoop de proteína vainilla,
+                            avena, miel y canela.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $90
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="menu__group">
+
+                      <h4 class="menu__group-title">
+                        TOAST
+                      </h4>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Cottage dulce
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Queso cottage, frutos rojos,
+                            lechera y nuez.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $85
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Crema de cacahuate
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Crema de cacahuate puro,
+                            plátano, maple y nuez.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $80
+                        </span>
+
+                      </div>
+
+
+                      <div class="menu__item">
+
+                        <div>
+                          <h3 class="menu__item-name">
+                            Cottage salado
+                          </h3>
+
+                          <p class="menu__item-description">
+                            Queso cottage, aguacate
+                            y huevo estrellado.
+                          </p>
+                        </div>
+
+                        <span class="menu__item-price">
+                          $85
+                        </span>
+
+                      </div>
+
+                    </div>
+
+
+                    <div class="menu__note">
+
+                      <strong>
+                        Elementos a elegir
+                      </strong>
+
+                      Leche entera ·
+                      Leche deslactosada ·
+                      Lala 100 + proteína +$5 ·
+                      Leche de almendra +$5
+
+                      <br /><br />
+
+                      <strong>
+                        Fruta
+                      </strong>
+
+                      Plátano · Fresa · Frutos rojos ·
+                      Manzana verde
+
+                      <br /><br />
+
+                      <strong>
+                        Proteína
+                      </strong>
+
+                      Chocolate o vainilla ·
+                      22 g por scoop
+
+                    </div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+          </div>
+
+
+          <div class="menu__closing">
+
+            <div class="menu__closing-line"></div>
+
+            <p class="menu__closing-text">
+              Un buen café siempre es una buena idea.
+            </p>
+
+            <p class="menu__closing-subtitle">
+              VIVANCOFFEE
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           EXPERIENCIA
+      ==================================================== -->
+
+      <section
+        class="experience"
+        id="experiencia"
+      >
+
+        <div class="experience__container">
+
+
+          <div class="experience__visual">
+
+            <div class="experience__image">
+
+              <img
+                src="./src/assets/images/cafeteria.jpg"
+                alt="Interior de VIVANCOFFEE"
+              />
+
+            </div>
+
+          </div>
+
+
+          <div class="experience__content">
+
+            <p class="experience__eyebrow">
+              MÁS QUE CAFÉ
+            </p>
+
+
+            <h2 class="experience__title">
+              UN LUGAR PARA
+              <span>QUEDARTE</span>
+            </h2>
+
+
+            <p class="experience__text">
+              En VIVANCOFFEE creemos que una cafetería
+              no solamente se trata del café.
+            </p>
+
+
+            <p class="experience__text">
+              Se trata de las conversaciones, las risas,
+              las fotos, las citas, las reuniones y esos
+              pequeños momentos que terminan convirtiéndose
+              en recuerdos.
+            </p>
+
+
+            <a
+              class="experience__button"
+              href="#galeria"
+            >
+              VER EL ESPACIO
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           GALERÍA
+      ==================================================== -->
+
+      <section
+        class="gallery"
+        id="galeria"
+      >
+
+        <div class="gallery__container">
+
+
+          <div class="gallery__header">
+
+            <p class="gallery__eyebrow">
+              VIVANCOFFEE
+            </p>
+
+
+            <h2 class="gallery__title">
+              NUESTRO
+              <span>ESPACIO</span>
+            </h2>
+
+          </div>
+
+
+          <div class="gallery__grid">
+
+
+            <figure
+              class="gallery__item gallery__item--large"
+            >
+
+              <img
+                src="./src/assets/images/gallery-1.jpg"
+                alt="Interior de VIVANCOFFEE"
+              />
+
+            </figure>
+
+
+            <figure class="gallery__item">
+
+              <img
+                src="./src/assets/images/gallery-2.jpg"
+                alt="Decoración de VIVANCOFFEE"
+              />
+
+            </figure>
+
+
+            <figure class="gallery__item">
+
+              <img
+                src="./src/assets/images/gallery-3.jpg"
+                alt="Café de VIVANCOFFEE"
+              />
+
+            </figure>
+
+
+            <figure
+              class="gallery__item gallery__item--wide"
+            >
+
+              <img
+                src="./src/assets/images/gallery-4.jpg"
+                alt="Clientes disfrutando VIVANCOFFEE"
+              />
+
+            </figure>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           UBICACIÓN
+      ==================================================== -->
+
+      <section
+        class="location"
+        id="ubicacion"
+      >
+
+        <div class="location__container">
+
+
+          <div class="location__content">
+
+            <p class="location__eyebrow">
+              VISÍTANOS
+            </p>
+
+
+            <h2 class="location__title">
+              VEN POR UN
+              <span>CAFÉ</span>
+            </h2>
+
+
+            <p class="location__text">
+              Encuéntranos y vive la experiencia
+              VIVANCOFFEE.
+            </p>
+
+
+            <div class="location__details">
+
+
+              <div class="location__detail">
+
+                <span class="location__label">
+                  UBICACIÓN
+                </span>
+
+                <p>
+                  San Felipe, Guanajuato
+                </p>
+
+              </div>
+
+
+              <div class="location__detail">
+
+                <span class="location__label">
+                  HORARIO
+                </span>
+
+                <p>
+                  Lunes a sábado
+                </p>
+
+                <p>
+                  5:00 PM — 11:00 PM
+                </p>
+
+              </div>
+
+
+            </div>
+
+
+            <a
+              class="location__button"
+              href="#contacto"
+            >
+              CONTÁCTANOS
+            </a>
+
+          </div>
+
+
+          <div class="location__map">
+
+            <div class="location__map-placeholder">
+
+              <span>
+                VIVANCOFFEE
+              </span>
+
+              <small>
+                SAN FELIPE, GUANAJUATO
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           CONTACTO
+      ==================================================== -->
+
+      <section
+        class="contact"
+        id="contacto"
+      >
+
+        <div class="contact__container">
+
+
+          <div class="contact__header">
+
+            <p class="contact__eyebrow">
+              HABLEMOS
+            </p>
+
+
+            <h2 class="contact__title">
+              ¿NOS VEMOS
+              <span>POR UN CAFÉ?</span>
+            </h2>
+
+          </div>
+
+
+          <div class="contact__content">
+
+
+            <div class="contact__info">
+
+              <p class="contact__text">
+                Síguenos en redes sociales y descubre
+                promociones, nuevos productos y todo
+                lo que sucede en VIVANCOFFEE.
+              </p>
+
+
+              <a
+                class="contact__social"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                INSTAGRAM
+              </a>
+
+            </div>
+
+
+            <form
+              class="contact__form"
+              action="#"
+              method="post"
+            >
+
+
+              <label class="contact__field">
+
+                <span>
+                  NOMBRE
+                </span>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Tu nombre"
+                  required
+                />
+
+              </label>
+
+
+              <label class="contact__field">
+
+                <span>
+                  CORREO
+                </span>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+
+              </label>
+
+
+              <label class="contact__field">
+
+                <span>
+                  MENSAJE
+                </span>
+
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Cuéntanos..."
+                  required
+                ></textarea>
+
+              </label>
+
+
+              <button
+                class="contact__submit"
+                type="submit"
+              >
+                ENVIAR MENSAJE
+              </button>
+
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+      <div class="footer__container">
+
+
+        <div class="footer__brand">
+
+          <a
+            class="footer__logo"
+            href="#inicio"
+          >
+            VIVANCOFFEE
+          </a>
+
+          <p class="footer__tagline">
+            CAFETERÍA Y REPOSTERÍA
           </p>
 
         </div>
 
-      </div>
 
-    </section>
+        <nav
+          class="footer__nav"
+          aria-label="Navegación del pie de página"
+        >
+
+          <a href="#inicio">
+            INICIO
+          </a>
+
+          <a href="#menu">
+            MENÚ
+          </a>
+
+          <a href="#experiencia">
+            EXPERIENCIA
+          </a>
+
+          <a href="#galeria">
+            GALERÍA
+          </a>
+
+          <a href="#ubicacion">
+            UBICACIÓN
+          </a>
+
+        </nav>
 
 
-    <!-- ===================================================
-         EXPERIENCIA
-    ==================================================== -->
+        <div class="footer__bottom">
 
-    <section
-      class="experience"
-      id="nosotros"
-    >
+          <p>
+            © 2026 VIVANCOFFEE.
+            TODOS LOS DERECHOS RESERVADOS.
+          </p>
 
-      <div class="experience__container">
-
-        <div class="experience__content">
-
-          <span class="experience__eyebrow">
-            NUESTRA HISTORIA
-          </span>
-
-          <h2 class="experience__title">
-            Un espacio para quedarse
-          </h2>
-
-          <p class="experience__description">
-            En Vivancoffee creemos que un buen café
-            es mucho más que una bebida.
+          <p>
+            HECHO CON CAFÉ ☕
           </p>
 
         </div>
 
-      </div>
-
-    </section>
-
-
-    <!-- ===================================================
-         GALERÍA
-    ==================================================== -->
-
-    <section
-      class="gallery"
-      id="galeria"
-    >
-
-      <div class="gallery__container">
-
-        <div class="gallery__header">
-
-          <span class="gallery__eyebrow">
-            MOMENTOS
-          </span>
-
-          <h2 class="gallery__title">
-            Vive Vivancoffee
-          </h2>
-
-        </div>
 
       </div>
 
-    </section>
+    </footer>
 
 
-    <!-- ===================================================
-         UBICACIÓN
-    ==================================================== -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-    <section
-      class="location"
-      id="ubicacion"
-    >
+    <script
+      src="./src/js/main.js"
+      defer
+    ></script>
 
-      <div class="location__container">
-
-        <div class="location__content">
-
-          <span class="location__eyebrow">
-            ENCUÉNTRANOS
-          </span>
-
-          <h2 class="location__title">
-            Ven a visitarnos
-          </h2>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ===================================================
-         CONTACTO
-    ==================================================== -->
-
-    <section
-      class="contact"
-      id="contacto"
-    >
-
-      <div class="contact__container">
-
-        <div class="contact__content">
-
-          <span class="contact__eyebrow">
-            CONTÁCTANOS
-          </span>
-
-          <h2 class="contact__title">
-            Queremos conocerte
-          </h2>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
-  <footer class="footer">
-
-    <div class="footer__container">
-
-      <p class="footer__text">
-        © 2026 VIVANCOFFEE.
-        Todos los derechos reservados.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =====================================================
-       JAVASCRIPT
-  ====================================================== -->
-
-  <script
-    src="./src/js/main.js"
-  ></script>
-
-</body>
-
+  </body>
 </html>
