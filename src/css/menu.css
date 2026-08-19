@@ -608,7 +608,7 @@
 
 
 /* =====================================================
-   ÍCONO
+   IMAGEN DE CATEGORÍA
 ===================================================== */
 
 .menu__category-icon {
@@ -619,10 +619,10 @@
     0;
 
   width:
-    62px;
+    82px;
 
   height:
-    62px;
+    82px;
 
   display:
     flex;
@@ -632,6 +632,9 @@
 
   justify-content:
     center;
+
+  overflow:
+    hidden;
 
   border:
     1px solid
@@ -662,9 +665,6 @@
       )
     );
 
-  font-size:
-    1.55rem;
-
   box-shadow:
     inset 0 0 20px
     rgba(
@@ -690,11 +690,69 @@
 }
 
 
+/* =====================================================
+   PNG DE CATEGORÍA
+===================================================== */
+
+.menu__category-icon img {
+  display:
+    block;
+
+  width:
+    92%;
+
+  height:
+    92%;
+
+  object-fit:
+    contain;
+
+  object-position:
+    center;
+
+  filter:
+    drop-shadow(
+      0 8px 10px
+      rgba(
+        0,
+        0,
+        0,
+        0.28
+      )
+    );
+
+  pointer-events:
+    none;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+
+.menu__category:hover
+.menu__category-icon img {
+  transform:
+    scale(1.08);
+
+  filter:
+    drop-shadow(
+      0 10px 14px
+      rgba(
+        0,
+        0,
+        0,
+        0.38
+      )
+    );
+}
+
+
 .menu__category:hover
 .menu__category-icon {
   transform:
-    scale(1.08)
-    rotate(-3deg);
+    scale(1.05)
+    rotate(-2deg);
 
   background:
     radial-gradient(
@@ -788,6 +846,9 @@
 
   justify-content:
     center;
+
+  flex-shrink:
+    0;
 
   border:
     1px solid
@@ -1453,13 +1514,19 @@
 
   .menu__category-icon {
     width:
-      48px;
+      58px;
 
     height:
-      48px;
+      58px;
+  }
 
-    font-size:
-      1.2rem;
+
+  .menu__category-icon img {
+    width:
+      94%;
+
+    height:
+      94%;
   }
 
 
@@ -1542,6 +1609,7 @@
   .menu__category-content,
   .menu__download,
   .menu__item {
+
     transition:
       none;
   }

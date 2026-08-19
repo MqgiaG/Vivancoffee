@@ -504,10 +504,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* =====================================================
      BOTÓN DESCARGAR MENÚ
-     
-     Por ahora mostramos un mensaje.
-     Cuando tengamos el PDF, aquí ponemos
-     la descarga real.
   ====================================================== */
 
   const downloadButton =
@@ -522,9 +518,25 @@ document.addEventListener("DOMContentLoaded", () => {
       "click",
       () => {
 
-        alert(
-          "El menú completo estará disponible próximamente."
-        );
+        const link =
+          document.createElement("a");
+
+
+        link.href =
+          "menu/Menu_Vivancoffee.pdf";
+
+
+        link.download =
+          "Menu_Vivancoffee.pdf";
+
+
+        document.body.appendChild(link);
+
+
+        link.click();
+
+
+        document.body.removeChild(link);
 
       }
     );
