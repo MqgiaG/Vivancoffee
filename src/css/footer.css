@@ -1,0 +1,274 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+  position: relative;
+
+  padding: 70px 0 28px;
+
+  background: #0b0706;
+
+  border-top:
+    1px solid
+    rgba(
+      245,
+      238,
+      231,
+      0.08
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   DECORACIÓN
+===================================================== */
+
+.footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 260px;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(
+        154,
+        170,
+        112,
+        0.7
+      ),
+      transparent
+    );
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.footer__container {
+  width:
+    min(
+      1180px,
+      calc(100% - 80px)
+    );
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   MARCA
+===================================================== */
+
+.footer__brand {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-bottom: 45px;
+
+  text-align: center;
+}
+
+
+.footer__logo {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #f5eee7;
+
+  font-family: Georgia, serif;
+
+  font-size: 36px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  text-decoration: none;
+}
+
+
+.footer__tagline {
+  margin: 0;
+
+  color: #9aaa70;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   LÍNEA DECORATIVA
+===================================================== */
+
+.footer__brand::after {
+  content: "";
+
+  width: 100%;
+
+  height: 1px;
+
+  margin-top: 42px;
+
+  background:
+    rgba(
+      245,
+      238,
+      231,
+      0.08
+    );
+}
+
+
+/* =====================================================
+   PARTE INFERIOR
+===================================================== */
+
+.footer__bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 24px;
+}
+
+
+.footer__bottom p {
+  margin: 0;
+
+  color: #756b64;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+.footer__bottom p:last-child {
+  color:
+    rgba(
+      154,
+      170,
+      112,
+      0.75
+    );
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media screen and (max-width: 900px) {
+
+  .footer {
+    padding:
+      60px 0 25px;
+  }
+
+
+  .footer__container {
+    width:
+      min(
+        calc(100% - 48px),
+        700px
+      );
+  }
+
+
+  .footer__brand {
+    margin-bottom: 40px;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+  .footer {
+    padding:
+      55px 0 24px;
+  }
+
+
+  .footer__container {
+    width:
+      calc(
+        100% - 36px
+      );
+  }
+
+
+  .footer__logo {
+    font-size: 28px;
+  }
+
+
+  .footer__tagline {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .footer__brand {
+    margin-bottom: 30px;
+  }
+
+
+  .footer__brand::after {
+    margin-top: 30px;
+  }
+
+
+  .footer__bottom {
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    text-align: center;
+  }
+
+
+  .footer__bottom p {
+    font-size: 9px;
+  }
+
+}

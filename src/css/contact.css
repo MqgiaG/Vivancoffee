@@ -1,0 +1,1008 @@
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+.contact {
+  position: relative;
+
+  padding: 130px 0 110px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #120b08 0%,
+      #180d09 100%
+    );
+
+  color: var(--color-white);
+
+  isolation: isolate;
+}
+
+
+/* =====================================================
+   DECORACIÓN
+===================================================== */
+
+.contact::before,
+.contact::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(
+        135,
+        153,
+        106,
+        0.08
+      ),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+.contact::before {
+  top: 5%;
+  left: -220px;
+}
+
+
+.contact::after {
+  right: -220px;
+  bottom: 5%;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contact__container {
+  width: min(
+    1180px,
+    calc(100% - 80px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.contact__header {
+  max-width: 850px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+
+.contact__eyebrow {
+  margin: 0 0 22px;
+
+  color: #87996a;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.35em;
+
+  text-transform: uppercase;
+}
+
+
+.contact__title {
+  margin: 0;
+
+  color: #f8f0e7;
+
+  font-family: var(--font-brand);
+
+  font-size:
+    clamp(
+      3.5rem,
+      6vw,
+      6rem
+    );
+
+  font-weight: 700;
+
+  line-height: 0.9;
+
+  letter-spacing: 0.01em;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 8px 25px
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+}
+
+
+.contact__title span {
+  display: block;
+
+  color: #87996a;
+}
+
+
+.contact__intro {
+  max-width: 620px;
+
+  margin: 28px auto 0;
+
+  color:
+    rgba(
+      248,
+      240,
+      231,
+      0.7
+    );
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.contact__content {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+
+/* =====================================================
+   TARJETA INDIVIDUAL
+===================================================== */
+
+.contact__card {
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 38px 32px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(
+      215,
+      184,
+      154,
+      0.18
+    );
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        58,
+        31,
+        19,
+        0.82
+      ),
+      rgba(
+        27,
+        14,
+        9,
+        0.96
+      )
+    );
+
+  box-shadow:
+    0 20px 50px
+    rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+}
+
+
+/* =====================================================
+   BRILLO INTERIOR
+===================================================== */
+
+.contact__card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  top: -120px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(
+        215,
+        184,
+        154,
+        0.08
+      ),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   DETALLE SUPERIOR
+===================================================== */
+
+.contact__card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 100px;
+  height: 3px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #87996a,
+      transparent
+    );
+
+  opacity: 0.8;
+}
+
+
+/* =====================================================
+   ÍCONO
+===================================================== */
+
+.contact__card-icon {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 20px;
+
+  border:
+    1px solid
+    rgba(
+      135,
+      153,
+      106,
+      0.35
+    );
+
+  border-radius: 15px;
+
+  background:
+    rgba(
+      135,
+      153,
+      106,
+      0.12
+    );
+
+  font-size: 1.35rem;
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      0,
+      0,
+      0,
+      0.2
+    );
+}
+
+
+/* =====================================================
+   ETIQUETA
+===================================================== */
+
+.contact__card-label {
+  margin: 0 0 10px;
+
+  color: #9aaa7b;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TÍTULO DE TARJETA
+===================================================== */
+
+.contact__card-title {
+  margin: 0 0 18px;
+
+  color: #f8f0e7;
+
+  font-family: var(--font-brand);
+
+  font-size: 1.7rem;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.contact__card-text {
+  max-width: 470px;
+
+  margin: 0;
+
+  color:
+    rgba(
+      248,
+      240,
+      231,
+      0.72
+    );
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   REFERENCIA
+===================================================== */
+
+.contact__card-reference {
+  max-width: 480px;
+
+  margin: 15px 0 0;
+
+  color:
+    rgba(
+      215,
+      184,
+      154,
+      0.6
+    );
+
+  font-size: 0.78rem;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   LINK UBICACIÓN
+===================================================== */
+
+.contact__card-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 22px;
+
+  padding:
+    10px 18px;
+
+  border:
+    1px solid
+    rgba(
+      135,
+      153,
+      106,
+      0.3
+    );
+
+  border-radius: 8px;
+
+  background:
+    rgba(
+      135,
+      153,
+      106,
+      0.06
+    );
+
+  color: #d7b89a;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HORARIOS
+===================================================== */
+
+.contact__schedule {
+  width: 100%;
+
+  max-width: 430px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  text-align: center;
+}
+
+
+.contact__schedule-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding-bottom: 17px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      215,
+      184,
+      154,
+      0.12
+    );
+}
+
+
+.contact__schedule-item:last-child {
+  padding-bottom: 0;
+
+  border-bottom: 0;
+}
+
+
+.contact__schedule-item strong {
+  color: #f8f0e7;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+.contact__schedule-item span {
+  color:
+    rgba(
+      215,
+      184,
+      154,
+      0.72
+    );
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+}
+
+
+.contact__schedule-item span:last-child {
+  color: #9aaa7b;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   WHATSAPP DESTACADO
+===================================================== */
+
+.contact__card--contact {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        92,
+        108,
+        63,
+        0.28
+      ),
+      rgba(
+        28,
+        15,
+        9,
+        0.96
+      )
+    );
+
+  border-color:
+    rgba(
+      135,
+      153,
+      106,
+      0.4
+    );
+}
+
+
+.contact__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 50px;
+
+  margin-top: 24px;
+
+  padding:
+    0 22px;
+
+  border:
+    1px solid
+    rgba(
+      166,
+      180,
+      132,
+      0.6
+    );
+
+  border-radius: 10px;
+
+  background:
+    #87996a;
+
+  color: #20140e;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   REDES SOCIALES
+===================================================== */
+
+.contact__socials {
+  width: 100%;
+
+  max-width: 430px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+.contact__social {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  width: 100%;
+
+  padding:
+    14px 16px;
+
+  border:
+    1px solid
+    rgba(
+      215,
+      184,
+      154,
+      0.1
+    );
+
+  border-radius: 10px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.02
+    );
+
+  color: #f8f0e7;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+
+.contact__social span {
+  color:
+    rgba(
+      215,
+      184,
+      154,
+      0.7
+    );
+
+  font-size: 0.75rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+
+  text-transform: none;
+}
+
+
+/* =====================================================
+   SERVICIOS
+===================================================== */
+
+.contact__services {
+  margin-top: 35px;
+
+  padding:
+    28px 32px;
+
+  border:
+    1px solid
+    rgba(
+      215,
+      184,
+      154,
+      0.16
+    );
+
+  border-radius: 18px;
+
+  background:
+    rgba(
+      48,
+      27,
+      17,
+      0.5
+    );
+
+  text-align: center;
+}
+
+
+.contact__services-title {
+  margin: 0 0 20px;
+
+  color: #9aaa7b;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+.contact__services-list {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 35px;
+
+  flex-wrap: wrap;
+}
+
+
+.contact__services-list span {
+  color:
+    rgba(
+      248,
+      240,
+      231,
+      0.78
+    );
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media screen and (max-width: 900px) {
+
+  .contact {
+    padding:
+      100px 0 85px;
+  }
+
+
+  .contact__container {
+    width:
+      min(
+        calc(100% - 50px),
+        720px
+      );
+  }
+
+
+  .contact__header {
+    margin-bottom: 50px;
+  }
+
+
+  .contact__content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .contact__card {
+    min-height: auto;
+  }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+  .contact {
+    padding:
+      80px 0 70px;
+  }
+
+
+  .contact__container {
+    width:
+      calc(
+        100% - 32px
+      );
+  }
+
+
+  .contact__header {
+    margin-bottom: 40px;
+  }
+
+
+  .contact__eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.25em;
+  }
+
+
+  .contact__title {
+    font-size:
+      clamp(
+        2.8rem,
+        13vw,
+        4.5rem
+      );
+
+    line-height: 0.92;
+  }
+
+
+  .contact__intro {
+    margin-top: 22px;
+
+    font-size: 0.85rem;
+  }
+
+
+  .contact__content {
+    gap: 14px;
+  }
+
+
+  .contact__card {
+    padding: 30px 22px;
+
+    border-radius: 18px;
+  }
+
+
+  .contact__card-icon {
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 18px;
+
+    font-size: 1.2rem;
+  }
+
+
+  .contact__card-title {
+    font-size: 1.45rem;
+  }
+
+
+  .contact__card-text {
+    font-size: 0.85rem;
+  }
+
+
+  .contact__schedule {
+    max-width: 100%;
+  }
+
+
+  .contact__socials {
+    max-width: 100%;
+  }
+
+
+  .contact__services {
+    margin-top: 25px;
+
+    padding:
+      24px 18px;
+  }
+
+
+  .contact__services-list {
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+
+  .contact__services-list span {
+    font-size: 0.65rem;
+  }
+
+
+  .contact__social {
+    align-items: center;
+
+    flex-direction: row;
+
+    gap: 10px;
+  }
+
+
+  .contact__button {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact__button {
+    transition: none;
+  }
+
+}
