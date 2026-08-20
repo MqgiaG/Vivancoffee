@@ -1,0 +1,198 @@
+/* =====================================================
+   CURSOR DE CAFÉ
+   SOLO COMPUTADORAS CON PUNTERO PRECISO
+===================================================== */
+
+.coffee-cursor {
+  display: none;
+}
+
+
+/* =====================================================
+   CURSOR PERSONALIZADO
+   MOUSE / TRACKPAD
+===================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* ===================================================
+     OCULTAR CURSOR NATIVO
+  ================================================== */
+
+  html,
+  body,
+  body * {
+    cursor: none !important;
+  }
+
+
+  /* ===================================================
+     CONTENEDOR DEL GRANO
+  ================================================== */
+
+  .coffee-cursor {
+
+    display: block;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 48px;
+    height: 48px;
+
+    z-index: 99999;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      rotate(-12deg);
+
+    will-change:
+      transform,
+      left,
+      top;
+
+    transition:
+      opacity 0.2s ease,
+      width 0.2s ease,
+      height 0.2s ease;
+  }
+
+
+  /* ===================================================
+     IMAGEN DEL GRANO
+  ================================================== */
+
+  .coffee-cursor img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    pointer-events: none;
+
+    background: transparent;
+
+    border: 0;
+
+    /*
+       IMPORTANTE:
+       No usamos mix-blend-mode.
+       El PNG conserva su transparencia.
+    */
+
+    filter:
+      drop-shadow(
+        0 4px 8px
+        rgba(
+          0,
+          0,
+          0,
+          0.35
+        )
+      );
+  }
+
+
+  /* ===================================================
+     CURSOR VISIBLE
+  ================================================== */
+
+  .coffee-cursor.is-visible {
+
+    opacity: 1;
+
+    animation:
+      coffee-float
+      2.5s
+      ease-in-out
+      infinite;
+  }
+
+
+  /* ===================================================
+     ANIMACIÓN DEL GRANO
+  ================================================== */
+
+  @keyframes coffee-float {
+
+    0%,
+    100% {
+
+      margin-top: 0;
+
+      rotate: -12deg;
+    }
+
+
+    50% {
+
+      margin-top: -5px;
+
+      rotate: 8deg;
+    }
+
+  }
+
+
+  /* ===================================================
+     HOVER SOBRE ELEMENTOS INTERACTIVOS
+  ================================================== */
+
+  .coffee-cursor.is-hovering {
+
+    width: 58px;
+
+    height: 58px;
+  }
+
+}
+
+
+/* =====================================================
+   DISPOSITIVOS TÁCTILES
+   CELULAR / IPHONE / IPAD / TABLET
+===================================================== */
+
+@media (hover: none), (pointer: coarse) {
+
+  html,
+  body,
+  body * {
+
+    cursor: auto !important;
+  }
+
+
+  .coffee-cursor {
+
+    display: none !important;
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCIR MOVIMIENTO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .coffee-cursor {
+
+    animation: none !important;
+  }
+
+}

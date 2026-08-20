@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =====================================================
-     MENÚ INTERACTIVO (CATEGORÍAS)
+     MENÚ INTERACTIVO - CATEGORÍAS
   ====================================================== */
 
   const categories =
@@ -316,6 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ".header__menu-button"
     );
 
+
   const navigation =
     document.querySelector(
       ".header__nav"
@@ -325,17 +326,32 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuButton && navigation) {
 
     const toggleMenu = (open) => {
-      const isOpen = typeof open === "boolean" 
-        ? open 
-        : !navigation.classList.contains("is-open");
 
-      navigation.classList.toggle("is-open", isOpen);
-      menuButton.classList.toggle("is-open", isOpen);
+      const isOpen =
+        typeof open === "boolean"
+          ? open
+          : !navigation.classList.contains(
+              "is-open"
+            );
+
+
+      navigation.classList.toggle(
+        "is-open",
+        isOpen
+      );
+
+
+      menuButton.classList.toggle(
+        "is-open",
+        isOpen
+      );
+
 
       menuButton.setAttribute(
         "aria-expanded",
         String(isOpen)
       );
+
 
       menuButton.setAttribute(
         "aria-label",
@@ -344,11 +360,21 @@ document.addEventListener("DOMContentLoaded", () => {
           : "Abrir menú"
       );
 
-      // Bloquea el scroll del fondo mientras el menú esté abierto
-      document.body.style.overflow = isOpen ? "hidden" : "";
+
+      /* Bloquea el scroll del fondo */
+
+      document.body.style.overflow =
+        isOpen
+          ? "hidden"
+          : "";
+
     };
 
-    menuButton.addEventListener("click", () => toggleMenu());
+
+    menuButton.addEventListener(
+      "click",
+      () => toggleMenu()
+    );
 
 
     /* ===============================================
@@ -367,7 +393,9 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener(
           "click",
           () => {
+
             toggleMenu(false);
+
           }
         );
 
@@ -378,7 +406,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =====================================================
-     CERRAR CON ESC (CATEGORÍAS Y MENÚ HAMBURGUESA)
+     CERRAR CON ESC
+     CATEGORÍAS + MENÚ HAMBURGUESA
   ====================================================== */
 
   document.addEventListener(
@@ -389,7 +418,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Cerrar categorías
+
+      /* =============================================
+         CERRAR CATEGORÍAS
+      ============================================== */
+
       categories.forEach(
         (category) => {
 
@@ -397,30 +430,66 @@ document.addEventListener("DOMContentLoaded", () => {
             "is-open"
           );
 
+
           const button =
             category.querySelector(
               ".menu__category-button"
             );
 
+
           if (button) {
+
             button.setAttribute(
               "aria-expanded",
               "false"
             );
+
           }
 
         }
       );
 
-      // Cerrar menú móvil si está abierto
-      if (navigation && navigation.classList.contains("is-open")) {
-        navigation.classList.remove("is-open");
+
+      /* =============================================
+         CERRAR MENÚ MÓVIL
+      ============================================== */
+
+      if (
+        navigation &&
+        navigation.classList.contains(
+          "is-open"
+        )
+      ) {
+
+        navigation.classList.remove(
+          "is-open"
+        );
+
+
         if (menuButton) {
-          menuButton.classList.remove("is-open");
-          menuButton.setAttribute("aria-expanded", "false");
-          menuButton.setAttribute("aria-label", "Abrir menú");
+
+          menuButton.classList.remove(
+            "is-open"
+          );
+
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+
+          menuButton.setAttribute(
+            "aria-label",
+            "Abrir menú"
+          );
+
         }
-        document.body.style.overflow = "";
+
+
+        document.body.style.overflow =
+          "";
+
       }
 
     }
@@ -445,14 +514,18 @@ document.addEventListener("DOMContentLoaded", () => {
         (event) => {
 
           const targetId =
-            link.getAttribute("href");
+            link.getAttribute(
+              "href"
+            );
 
 
           if (
             !targetId ||
             targetId === "#"
           ) {
+
             return;
+
           }
 
 
@@ -499,7 +572,9 @@ document.addEventListener("DOMContentLoaded", () => {
       () => {
 
         const link =
-          document.createElement("a");
+          document.createElement(
+            "a"
+          );
 
 
         link.href =
@@ -510,13 +585,153 @@ document.addEventListener("DOMContentLoaded", () => {
           "Menu_Vivancoffee.pdf";
 
 
-        document.body.appendChild(link);
+        document.body.appendChild(
+          link
+        );
 
 
         link.click();
 
 
-        document.body.removeChild(link);
+        document.body.removeChild(
+          link
+        );
+
+      }
+    );
+
+  }
+
+
+  /* =====================================================
+     CURSOR DE CAFÉ
+  ====================================================== */
+
+  const coffeeCursor =
+    document.querySelector(
+      ".coffee-cursor"
+    );
+
+
+  if (coffeeCursor) {
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let cursorX = 0;
+    let cursorY = 0;
+
+
+    /* =============================================
+       MOVER EL CURSOR
+    ============================================== */
+
+    document.addEventListener(
+      "mousemove",
+      (event) => {
+
+        mouseX =
+          event.clientX;
+
+        mouseY =
+          event.clientY;
+
+
+        coffeeCursor.classList.add(
+          "is-visible"
+        );
+
+      }
+    );
+
+
+    /* =============================================
+       MOVIMIENTO SUAVE
+    ============================================== */
+
+    const animateCoffeeCursor = () => {
+
+      cursorX +=
+        (mouseX - cursorX) * 0.15;
+
+
+      cursorY +=
+        (mouseY - cursorY) * 0.15;
+
+
+      coffeeCursor.style.left =
+        `${cursorX}px`;
+
+
+      coffeeCursor.style.top =
+        `${cursorY}px`;
+
+
+      requestAnimationFrame(
+        animateCoffeeCursor
+      );
+
+    };
+
+
+    animateCoffeeCursor();
+
+
+    /* =============================================
+       OCULTAR AL SALIR DE LA VENTANA
+    ============================================== */
+
+    document.addEventListener(
+      "mouseleave",
+      () => {
+
+        coffeeCursor.classList.remove(
+          "is-visible"
+        );
+
+      }
+    );
+
+
+    /* =============================================
+       MOSTRAR AL VOLVER
+    ============================================== */
+
+    document.addEventListener(
+      "mouseenter",
+      () => {
+
+        coffeeCursor.classList.add(
+          "is-visible"
+        );
+
+      }
+    );
+
+
+    /* =============================================
+       EFECTO AL HACER CLICK
+    ============================================== */
+
+    document.addEventListener(
+      "mousedown",
+      () => {
+
+        coffeeCursor.classList.add(
+          "is-clicked"
+        );
+
+      }
+    );
+
+
+    document.addEventListener(
+      "mouseup",
+      () => {
+
+        coffeeCursor.classList.remove(
+          "is-clicked"
+        );
 
       }
     );
