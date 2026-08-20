@@ -1158,7 +1158,7 @@
       100svh;
 
     padding:
-      95px 16px 78px;
+      85px 16px 70px;
 
     align-items:
       center;
@@ -1195,7 +1195,7 @@
       8px;
 
     margin-bottom:
-      18px;
+      14px;
 
     font-size:
       0.52rem;
@@ -1236,9 +1236,9 @@
 
     font-size:
       clamp(
-        2.9rem,
-        14.5vw,
-        4.1rem
+        2.7rem,
+        13.5vw,
+        3.8rem
       );
 
     line-height:
@@ -1267,16 +1267,16 @@
       8px;
 
     margin-top:
-      23px;
+      18px;
   }
 
 
   .hero__subtitle h2 {
     font-size:
       clamp(
-        1.15rem,
-        5.5vw,
-        1.65rem
+        1.1rem,
+        5.2vw,
+        1.5rem
       );
 
     line-height:
@@ -1308,19 +1308,19 @@
       100%;
 
     max-width:
-      360px;
+      320px;
 
     margin:
-      20px auto 0;
+      15px auto 0;
 
     padding:
-      0 8px;
+      0 6px;
 
     font-size:
-      0.78rem;
+      0.75rem;
 
     line-height:
-      1.65;
+      1.6;
 
     text-align:
       center;
@@ -1332,14 +1332,20 @@
   =============================================== */
 
   .hero__actions {
+    position:
+      relative;
+
+    z-index:
+      15;
+
     width:
       100%;
 
     margin-top:
-      25px;
+      20px;
 
     gap:
-      12px;
+      10px;
 
     flex-direction:
       column;
@@ -1353,26 +1359,26 @@
     width:
       min(
         100%,
-        300px
+        230px
       );
 
     min-height:
-      52px;
+      46px;
 
     padding:
-      0 20px;
+      0 16px;
 
     gap:
       8px;
 
     border-radius:
-      13px;
+      12px;
 
     font-size:
-      0.67rem;
+      0.62rem;
 
     letter-spacing:
-      0.13em;
+      0.12em;
 
     box-sizing:
       border-box;
@@ -1381,7 +1387,7 @@
 
   .hero__button-icon {
     font-size:
-      1rem;
+      0.95rem;
   }
 
 
@@ -1391,7 +1397,51 @@
 
   .hero__illustration {
     display:
+      block;
+
+    z-index:
+      8;
+
+    pointer-events:
       none;
+  }
+
+
+  .hero__illustration--board {
+    left:
+      4px;
+
+    bottom:
+      48px;
+
+    width:
+      clamp(
+        88px,
+        24vw,
+        115px
+      );
+
+    transform:
+      rotate(-3deg);
+  }
+
+
+  .hero__illustration--coffee {
+    right:
+      4px;
+
+    bottom:
+      48px;
+
+    width:
+      clamp(
+        82px,
+        22vw,
+        110px
+      );
+
+    transform:
+      rotate(3deg);
   }
 
 
@@ -1574,13 +1624,13 @@
 
   .hero__scroll {
     bottom:
-      8px;
+      6px;
 
     gap:
       2px;
 
     font-size:
-      0.58rem;
+      0.55rem;
 
     letter-spacing:
       0.22em;
@@ -1589,7 +1639,7 @@
 
   .hero__scroll-arrow {
     font-size:
-      1.25rem;
+      1.15rem;
   }
 
 }
@@ -1603,13 +1653,13 @@
 
   .hero__container {
     padding:
-      88px 14px 72px;
+      78px 12px 65px;
   }
 
 
   .hero__eyebrow {
     font-size:
-      0.47rem;
+      0.45rem;
 
     letter-spacing:
       0.14em;
@@ -1621,16 +1671,16 @@
 
   .hero__eyebrow-line {
     width:
-      22px;
+      20px;
   }
 
 
   .hero__title {
     font-size:
       clamp(
-        2.65rem,
-        14vw,
-        3.4rem
+        2.4rem,
+        13vw,
+        3.1rem
       );
 
     letter-spacing:
@@ -1640,40 +1690,40 @@
 
   .hero__subtitle {
     margin-top:
-      20px;
+      15px;
   }
 
 
   .hero__subtitle h2 {
     font-size:
-      1.05rem;
+      0.98rem;
   }
 
 
   .hero__subtitle-line {
     width:
-      18px;
+      16px;
   }
 
 
   .hero__description {
     max-width:
-      310px;
+      280px;
 
     font-size:
-      0.73rem;
+      0.7rem;
 
     line-height:
-      1.6;
+      1.5;
   }
 
 
   .hero__actions {
     margin-top:
-      21px;
+      16px;
 
     gap:
-      10px;
+      8px;
   }
 
 
@@ -1681,20 +1731,44 @@
     width:
       min(
         100%,
-        280px
+        210px
       );
 
     min-height:
-      49px;
+      42px;
 
     font-size:
-      0.62rem;
+      0.58rem;
+  }
+
+
+  .hero__illustration--board {
+    width:
+      78px;
+
+    left:
+      2px;
+
+    bottom:
+      48px;
+  }
+
+
+  .hero__illustration--coffee {
+    width:
+      72px;
+
+    right:
+      2px;
+
+    bottom:
+      48px;
   }
 
 
   .hero__heart {
     font-size:
-      1.5rem;
+      1.3rem;
   }
 
 }
