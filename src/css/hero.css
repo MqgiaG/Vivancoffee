@@ -187,10 +187,6 @@
   color:
     var(--color-cream);
 
-  /*
-     Sombra profunda + volumen + brillo suave
-  */
-
   text-shadow:
     4px 5px 0
     rgba(
@@ -464,9 +460,6 @@
 
 /* =========================================================
    ILUSTRACIONES
-   IMPORTANTE:
-   ESTÁN FUERA DEL CONTENIDO CENTRAL
-   PARA NO MOVER EL CENTRO DEL HERO
 ========================================================= */
 
 .hero__illustration {
@@ -1148,12 +1141,30 @@
 
 @media screen and (max-width: 700px) {
 
+  .hero {
+    min-height:
+      100svh;
+
+    align-items:
+      stretch;
+  }
+
+
   .hero__container {
     width:
       100%;
 
+    min-height:
+      100svh;
+
     padding:
-      110px 22px 80px;
+      95px 16px 78px;
+
+    align-items:
+      center;
+
+    box-sizing:
+      border-box;
   }
 
 
@@ -1165,82 +1176,171 @@
       100%;
 
     padding:
-      0 10px;
+      0 4px;
+
+    box-sizing:
+      border-box;
   }
 
 
+  /* ===============================================
+     EYEBROW
+  =============================================== */
+
   .hero__eyebrow {
+    width:
+      100%;
+
     gap:
       8px;
 
+    margin-bottom:
+      18px;
+
     font-size:
-      0.55rem;
+      0.52rem;
 
     letter-spacing:
-      0.2em;
+      0.18em;
+
+    white-space:
+      nowrap;
   }
 
 
   .hero__eyebrow-line {
     width:
-      30px;
+      28px;
+
+    height:
+      1px;
   }
 
+
+  /* ===============================================
+     TÍTULO
+  =============================================== */
 
   .hero__title {
     width:
       100%;
 
+    max-width:
+      100%;
+
+    padding:
+      0;
+
+    margin:
+      0;
+
     font-size:
       clamp(
-        3.5rem,
-        17vw,
-        6rem
+        2.9rem,
+        14.5vw,
+        4.1rem
       );
 
     line-height:
-      0.9;
+      0.92;
+
+    letter-spacing:
+      -0.045em;
+
+    white-space:
+      nowrap;
+
+    text-align:
+      center;
   }
 
 
+  /* ===============================================
+     SUBTÍTULO
+  =============================================== */
+
   .hero__subtitle {
+    width:
+      100%;
+
     gap:
       8px;
 
     margin-top:
-      25px;
+      23px;
   }
 
 
   .hero__subtitle h2 {
     font-size:
       clamp(
-        1.2rem,
-        6vw,
-        2rem
+        1.15rem,
+        5.5vw,
+        1.65rem
       );
 
+    line-height:
+      1.05;
+
     letter-spacing:
-      0.02em;
+      0;
+
+    white-space:
+      nowrap;
   }
 
 
   .hero__subtitle-line {
     width:
-      25px;
+      24px;
+
+    height:
+      2px;
   }
 
+
+  /* ===============================================
+     DESCRIPCIÓN
+  =============================================== */
 
   .hero__description {
+    width:
+      100%;
+
     max-width:
-      500px;
+      360px;
+
+    margin:
+      20px auto 0;
+
+    padding:
+      0 8px;
 
     font-size:
-      0.85rem;
+      0.78rem;
+
+    line-height:
+      1.65;
+
+    text-align:
+      center;
   }
 
 
+  /* ===============================================
+     BOTONES
+  =============================================== */
+
   .hero__actions {
+    width:
+      100%;
+
+    margin-top:
+      25px;
+
+    gap:
+      12px;
+
     flex-direction:
       column;
 
@@ -1253,15 +1353,41 @@
     width:
       min(
         100%,
-        330px
+        300px
       );
+
+    min-height:
+      52px;
+
+    padding:
+      0 20px;
+
+    gap:
+      8px;
+
+    border-radius:
+      13px;
+
+    font-size:
+      0.67rem;
+
+    letter-spacing:
+      0.13em;
+
+    box-sizing:
+      border-box;
   }
 
 
-  /*
-     En móvil quitamos las ilustraciones
-     para mantener el contenido limpio.
-  */
+  .hero__button-icon {
+    font-size:
+      1rem;
+  }
+
+
+  /* ===============================================
+     ILUSTRACIONES
+  =============================================== */
 
   .hero__illustration {
     display:
@@ -1269,51 +1395,306 @@
   }
 
 
+  /* ===============================================
+     HOJAS
+  =============================================== */
+
   .hero__leaf {
+    width:
+      70px;
+
+    height:
+      30px;
+
     opacity:
-      0.45;
+      0.38;
+
+    z-index:
+      3;
+  }
+
+
+  .hero__leaf::after {
+    width:
+      55px;
+
+    left:
+      6px;
   }
 
 
   .hero__leaf--1 {
     left:
-      -35px;
+      -38px;
+
+    bottom:
+      190px;
+
+    transform:
+      rotate(-25deg)
+      scale(0.7);
   }
 
 
   .hero__leaf--2 {
     left:
-      -55px;
+      -48px;
+
+    bottom:
+      360px;
+
+    transform:
+      rotate(-10deg)
+      scale(0.55);
   }
 
 
   .hero__leaf--3 {
     right:
-      -35px;
+      -38px;
+
+    bottom:
+      220px;
+
+    transform:
+      rotate(20deg)
+      scale(0.7);
   }
 
 
   .hero__leaf--4 {
     right:
-      -55px;
+      -48px;
+
+    bottom:
+      380px;
+
+    transform:
+      rotate(-35deg)
+      scale(0.55);
+  }
+
+
+  /* ===============================================
+     CORAZONES
+  =============================================== */
+
+  .hero__heart {
+    font-size:
+      1.8rem;
+
+    z-index:
+      4;
   }
 
 
   .hero__heart--one {
+    top:
+      25%;
+
     left:
       5%;
   }
 
 
   .hero__heart--two {
+    top:
+      52%;
+
     right:
-      5%;
+      4%;
   }
 
 
   .hero__heart--three {
+    bottom:
+      25%;
+
     left:
-      10%;
+      8%;
+  }
+
+
+  /* ===============================================
+     DESTELLOS
+  =============================================== */
+
+  .hero__spark {
+    font-size:
+      1.4rem;
+
+    opacity:
+      0.55;
+  }
+
+
+  .hero__spark--one {
+    top:
+      35%;
+
+    right:
+      8%;
+  }
+
+
+  .hero__spark--two {
+    bottom:
+      32%;
+
+    right:
+      12%;
+  }
+
+
+  .hero__spark--three {
+    top:
+      55%;
+
+    left:
+      8%;
+  }
+
+
+  /* ===============================================
+     MESA
+  =============================================== */
+
+  .hero__table {
+    height:
+      48px;
+
+    border-top-width:
+      4px;
+  }
+
+
+  /* ===============================================
+     DESCUBRE
+  =============================================== */
+
+  .hero__scroll {
+    bottom:
+      8px;
+
+    gap:
+      2px;
+
+    font-size:
+      0.58rem;
+
+    letter-spacing:
+      0.22em;
+  }
+
+
+  .hero__scroll-arrow {
+    font-size:
+      1.25rem;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+  .hero__container {
+    padding:
+      88px 14px 72px;
+  }
+
+
+  .hero__eyebrow {
+    font-size:
+      0.47rem;
+
+    letter-spacing:
+      0.14em;
+
+    gap:
+      6px;
+  }
+
+
+  .hero__eyebrow-line {
+    width:
+      22px;
+  }
+
+
+  .hero__title {
+    font-size:
+      clamp(
+        2.65rem,
+        14vw,
+        3.4rem
+      );
+
+    letter-spacing:
+      -0.05em;
+  }
+
+
+  .hero__subtitle {
+    margin-top:
+      20px;
+  }
+
+
+  .hero__subtitle h2 {
+    font-size:
+      1.05rem;
+  }
+
+
+  .hero__subtitle-line {
+    width:
+      18px;
+  }
+
+
+  .hero__description {
+    max-width:
+      310px;
+
+    font-size:
+      0.73rem;
+
+    line-height:
+      1.6;
+  }
+
+
+  .hero__actions {
+    margin-top:
+      21px;
+
+    gap:
+      10px;
+  }
+
+
+  .hero__button {
+    width:
+      min(
+        100%,
+        280px
+      );
+
+    min-height:
+      49px;
+
+    font-size:
+      0.62rem;
+  }
+
+
+  .hero__heart {
+    font-size:
+      1.5rem;
   }
 
 }
