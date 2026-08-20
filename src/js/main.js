@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =====================================================
-     MENÚ INTERACTIVO
+     MENÚ INTERACTIVO (CATEGORÍAS)
   ====================================================== */
 
   const categories =
@@ -308,49 +308,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =====================================================
-     CERRAR MENÚ CON ESC
-  ====================================================== */
-
-  document.addEventListener(
-    "keydown",
-    (event) => {
-
-      if (event.key !== "Escape") {
-        return;
-      }
-
-
-      categories.forEach(
-        (category) => {
-
-          category.classList.remove(
-            "is-open"
-          );
-
-
-          const button =
-            category.querySelector(
-              ".menu__category-button"
-            );
-
-
-          if (button) {
-
-            button.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-          }
-
-        }
-      );
-
-    }
-  );
-
-
-  /* =====================================================
      MENÚ HAMBURGUESA
   ====================================================== */
 
@@ -367,37 +324,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (menuButton && navigation) {
 
-    menuButton.addEventListener(
-      "click",
-      () => {
+    const toggleMenu = (open) => {
+      const isOpen = typeof open === "boolean" 
+        ? open 
+        : !navigation.classList.contains("is-open");
 
-        const isOpen =
-          navigation.classList.toggle(
-            "is-open"
-          );
+      navigation.classList.toggle("is-open", isOpen);
+      menuButton.classList.toggle("is-open", isOpen);
 
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
 
-        menuButton.classList.toggle(
-          "is-open",
-          isOpen
-        );
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Cerrar menú"
+          : "Abrir menú"
+      );
 
+      // Bloquea el scroll del fondo mientras el menú esté abierto
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    };
 
-        menuButton.setAttribute(
-          "aria-expanded",
-          String(isOpen)
-        );
-
-
-        menuButton.setAttribute(
-          "aria-label",
-          isOpen
-            ? "Cerrar menú"
-            : "Abrir menú"
-        );
-
-      }
-    );
+    menuButton.addEventListener("click", () => toggleMenu());
 
 
     /* ===============================================
@@ -416,28 +367,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener(
           "click",
           () => {
-
-            navigation.classList.remove(
-              "is-open"
-            );
-
-
-            menuButton.classList.remove(
-              "is-open"
-            );
-
-
-            menuButton.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-
-            menuButton.setAttribute(
-              "aria-label",
-              "Abrir menú"
-            );
-
+            toggleMenu(false);
           }
         );
 
@@ -445,6 +375,56 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
   }
+
+
+  /* =====================================================
+     CERRAR CON ESC (CATEGORÍAS Y MENÚ HAMBURGUESA)
+  ====================================================== */
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+
+      if (event.key !== "Escape") {
+        return;
+      }
+
+      // Cerrar categorías
+      categories.forEach(
+        (category) => {
+
+          category.classList.remove(
+            "is-open"
+          );
+
+          const button =
+            category.querySelector(
+              ".menu__category-button"
+            );
+
+          if (button) {
+            button.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+          }
+
+        }
+      );
+
+      // Cerrar menú móvil si está abierto
+      if (navigation && navigation.classList.contains("is-open")) {
+        navigation.classList.remove("is-open");
+        if (menuButton) {
+          menuButton.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Abrir menú");
+        }
+        document.body.style.overflow = "";
+      }
+
+    }
+  );
 
 
   /* =====================================================
